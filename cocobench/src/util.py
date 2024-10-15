@@ -2,23 +2,11 @@
 
 import os
 from typing import *
-import gzip
 import json
-
-from core.dataloader import DataLoader
 
 EVAL_MODEL = {
     "wizard": ["AutoTokenizer", "GPTBigCodeForCausalLM", "PreTrainedTokenizer", "PreTrainedModel"]
 }
-
-
-def read_problems(task_type):
-    root_directory = 'data/'
-    # task_type = 'CG/'
-    data_loader = DataLoader(root_directory, task_type)
-    data_loader.load_data()
-    raw_data = data_loader.get_data()
-    return raw_data
 
 def write_jsonl(data, output_path):
     """
