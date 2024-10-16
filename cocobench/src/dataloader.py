@@ -23,7 +23,10 @@ def read_problems(tasktype: str, dirname: str = COCOBENCH_DATA_DIR) -> Dict[str,
         containing task details.
     """
     # Construct the path to the task directory by appending the task type to the root directory
-    task_dir = os.path.join(dirname, tasktype)
+    if tasktype == 'CUF' or tasktype == 'CUR':
+        task_dir = os.path.join(dirname, 'CU')
+    else:
+        task_dir = os.path.join(dirname, tasktype)
     
     # Read the JSONL files from the task directory and return a dictionary of task data
     return {task["task_id"]: task for task in read_jsonl(task_dir)}

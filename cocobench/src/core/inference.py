@@ -5,12 +5,12 @@ from transformers import (
     PreTrainedModel,
 )
 
-from cocobench.src.prompts import CG_prompt
-from core.evaluation import eval
+from prompts import CG_prompt
+from cocobench.src.core.generation import generate
 import os
 import torch
 
-TOKEN = "" # huggingface access token
+TOKEN = "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" # huggingface access token
 
 
 @torch.inference_mode()
@@ -63,12 +63,15 @@ if __name__ == "__main__":
             use_auth_token=TOKEN,
         ).eval()
     )
+    
+    tasktype = 'CG'
 
-    eval(
+    generate(
         model,
         tokenizer,
         num_samples_per_task,
         out_path,
+        tasktype,
         generate_batch_completion,
         True,
     )
