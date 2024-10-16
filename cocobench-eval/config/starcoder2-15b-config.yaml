@@ -1,0 +1,7 @@
+model_path: ["/data/models/code_models/starcoder/starcoder2-15b/"]
+file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
+type: ["CD"]
+batch_size: 1
+# output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
+output_path: "/data/project/dongmh/codebench/max_length_4096_result/"
+max_memory: '{1:"80GIB"}'

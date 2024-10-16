@@ -1,0 +1,8 @@
+# model_path: ["/data/models/codellama/CodeLlama-7b-hf/", "/data/models/codellama/CodeLlama-13b-hf/", "/data/models/codellama/CodeLlama-34b-hf/", "/data/models/deepseek/deepseek-coder-1.3b-base/", "/data/models/deepseek/deepseek-coder-6.7b-base/", "/data/models/deepseek/deepseek-coder-33b-base/", "/data/models/starcoder/starcoder/", "/data/models/starcoder/starcoder2-3b/", "/data/models/starcoder/starcoder2-7b/", "/data/models/starcoder/starcoder2-15b/"]
+model_path: ["/data/project/dongmh/codebench/closed_source_prompt/"]
+file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
+type: ["CD"]
+batch_size: 1
+# output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
+output_path: "/data/project/dongmh/codebench/closed_source_prompt/"
+max_memory: '{4:"80GIB", 5:"80GIB", 6:"80GIB", 7:"80GIB"}'

@@ -1,31 +1,39 @@
+import os
+import sys
+import torch
+import yaml
 from transformers import (
     AutoTokenizer,
-    GPTBigCodeForCausalLM,
+    AutoModelForCausalLM,
     PreTrainedTokenizer,
     PreTrainedModel,
 )
 
 from core.generation import generate
-import os
-import torch
 
-TOKEN = "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" # huggingface access token
-
+# 加载 YAML 配置文件
+def load_config(config_path: str) -> dict:
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"Config file not found at: {config_path}")
+    with open(config_path, 'r') as file:
+        config = yaml.safe_load(file)
+    return config
 
 @torch.inference_mode()
 def generate_batch_completion(
     model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prompt: str, batch_size: int
 ) -> list[str]:
-    # prompt_input = CG_prompt(prompt)
     input_batch = [prompt for _ in range(batch_size)]
-    inputs = tokenizer(input_batch, return_tensors="pt").to(model.device) #return pytorch tensors
-    input_length = inputs.input_ids.size(dim=1) # get sequence length
+    # inputs = tokenizer(input_batch, return_tensors="pt").to(model.device)  # Return PyTorch tensors
+    # inputs = tokenizer(input_batch, return_tensors='pt', truncation=True, max_length=512).to(model.device)
+    inputs = tokenizer(input_batch, return_tensors='pt', truncation=False).to(model.device)
+    input_length = inputs.input_ids.size(dim=1)  # Get sequence length
 
     generated_ids = model.generate(
         **inputs,
         use_cache=True,
         max_new_tokens=512,
-        temperature=0.2,
+        temperature=0.7,
         top_p=0.95,
         do_sample=True,
         eos_token_id=tokenizer.eos_token_id,
@@ -41,36 +49,74 @@ def generate_batch_completion(
 
 
 if __name__ == "__main__":
-    num_samples_per_task = 10
-    out_path = "results/wizard/eval.jsonl"
-    os.makedirs("results/wizard", exist_ok=True)
+    # 从命令行参数读取 config_path
+    if len(sys.argv) < 2:
+        print("Error: Please provide the config file path as an argument.")
+        print("Usage: python script.py <config_path>")
+        sys.exit(1)  # 退出程序并返回错误代码
 
+    config_path = sys.argv[1]  # 获取命令行中传入的配置文件路径
+    config_path = os.path.join('./cocobench-eval/config', config_path+'.yaml')
+
+    try:
+        # 加载 YAML 文件中的配置
+        config = load_config(config_path)
+    except FileNotFoundError as e:
+        print(e)
+        sys.exit(1)  # 退出程序
+
+    # 从 YAML 文件中获取模型路径、输出路径、batch_size 和 max_memory 等配置
+    model_path = config['model_path'][0]  # 解析模型路径
+    output_path = os.path.join('results', config['output_path'])   # 解析输出路径
+    batch_size = config.get('batch_size', 1)  # 如果没有定义 batch_size，默认使用 1
+    max_memory = eval(config['max_memory'])   # 解析 max_memory，使用 eval 将字符串转为字典
+
+    # 获取 tasktype 列表
+    tasktypes = config['type']  # 解析多个 tasktype
+
+    # num_samples_per_task = 10
+    num_samples_per_task = 1
+
+    # 创建输出目录
+    os.makedirs(output_path, exist_ok=True)
+
+    # 加载本地保存的 tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
-        "WizardLM/WizardCoder-15B-V1.0",
-        use_auth_token=TOKEN,
+        model_path  # 从本地路径加载 tokenizer
     )
 
-    model = torch.compile(
-        GPTBigCodeForCausalLM.from_pretrained(
-            "WizardLM/WizardCoder-15B-V1.0",
+    # 加载本地保存的模型
+    '''model = torch.compile(
+        AutoModelForCausalLM.from_pretrained(
+            model_path,  # 从本地路径加载模型
             device_map="auto",
             torch_dtype=torch.bfloat16,
-            max_memory={
-                0: "18GiB",
-                1: "18GiB",
-            },
-            use_auth_token=TOKEN,
+            max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
         ).eval()
-    )
+    )'''
+    model = AutoModelForCausalLM.from_pretrained(
+            model_path,  # 从本地路径加载模型
+            device_map="auto",
+            torch_dtype=torch.bfloat16,
+            # max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
+            max_memory = {i: "10GiB" for i in range(8)}
+        ).eval()
     
-    tasktype = 'CR'
 
-    generate(
-        model,
-        tokenizer,
-        num_samples_per_task,
-        out_path,
-        tasktype,
-        generate_batch_completion,
-        True,
-    )
+    # 遍历每个 tasktype，分别调用 generate 函数
+    for tasktype in tasktypes:
+        # 为每个 tasktype 创建单独的输出目录或文件名
+        task_output_path = os.path.join(output_path, f"result_{tasktype}.jsonl")
+
+        print(f"Processing tasktype: {tasktype}, output to: {task_output_path}")
+
+        # 调用 generate 函数进行推理
+        generate(
+            model,
+            tokenizer,
+            num_samples_per_task,
+            task_output_path,  # 使用为该 tasktype 定义的输出路径
+            tasktype,          # 当前的 tasktype
+            generate_batch_completion,
+            True,
+        )

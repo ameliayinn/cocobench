@@ -46,11 +46,24 @@ def generate(
     
     # Loop over all tasks in the dataset
     for task_id in problems:
+        if tasktype == 'CG':
+            prompt_paradigm = {"description": problems[task_id]["description"], "incomplete_code": problems[task_id]["incomplete_code"], "complete_code": ""}
+        if tasktype == 'CM':
+            # prompt_paradigm = {"description": problems[task_id]["description"], "buggy_code": problems[task_id]["buggy_code"], "corrected_code": ""}
+            prompt_paradigm = problems[task_id]["buggy_code"]
+        if tasktype == 'CR':
+            prompt_paradigm = {"requirement": "Check Python code snippets for syntax errors, logic errors, performance issues, and security vulnerabilities. Function description of the function: " + problems[task_id]["requirement"], "problem_code": problems[task_id]["problem_code"], "performance_issues": "", "security_issues": "", "irregular_naming": "", "logical_errors": ""}
+        if tasktype == 'CUF':
+            prompt_paradigm = {"code": problems[task_id]["code"], "input": problems[task_id]["input"], "output": ""}
+        if tasktype == 'CUR':
+            prompt_paradigm = {"code": problems[task_id]["code"], "input": "", "output": problems[task_id]["output"]}
+        
         # Check if the prompt should replace spaces with tabs, if format_tabs is True
         if format_tabs:
-            prompt = PROMPTS[tasktype][0] + str({"description": problems[task_id]["description"], "incomplete_code": problems[task_id]["incomplete_code"], "complete_code": ""}).replace("    ", "\t") + PROMPTS[tasktype][1]
+            prompt = PROMPTS[tasktype][0] + str(prompt_paradigm).replace("    ", "\t") + PROMPTS[tasktype][1]
         else:
-            prompt = PROMPTS[tasktype][0] + str({"description": problems[task_id]["description"], "incomplete_code": problems[task_id]["incomplete_code"], "complete_code": ""}) + PROMPTS[tasktype][1]
+            # prompt = PROMPTS[tasktype][0] + str(prompt_paradigm) + PROMPTS[tasktype][1]
+            prompt = prompt_paradigm + PROMPTS[tasktype][1]
 
         # Generate a batch of completions for the current task
         batch_completions = generate_batch_completion(
@@ -60,8 +73,9 @@ def generate(
         # For each completion in the batch, create a result dictionary and append it to samples
         for sample in batch_completions:
             result = dict(
-                task_id=task_id,  # The task ID for which the completion was generated
-                completion=sample,  # The generated completion text
+                # task_id=task_id,  # The task ID for which the completion was generated
+                # input=prompt,
+                output=sample,  # The generated completion text
             )
 
             # Add the result to the list of samples
@@ -70,4 +84,4 @@ def generate(
         # Update the progress bar by the number of samples generated for this task
         pbar.update(num_samples_per_task)
 
-    write_jsonl(out_path, samples)
+    write_jsonl(samples, out_path)

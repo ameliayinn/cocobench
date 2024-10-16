@@ -54,7 +54,10 @@ Example two:
 Among them, the corrected_code part is the correct code obtained by correcting the problematic bug_code part according to the description part.
 """
 
-CM_end = """\nPlease correct the above function. Give only the code."""
+CM_end = """\nPlease correct the problematic function in the bug_code part according to the function described in the description part, and write the finally corrected and executable code into the corrected_code part.
+The format of your output must be consistent with the example I gave, and do not output any additional information. Please output the results in json format.
+I am writing the output format again:{"description": "", "bug_code": "", "corrected_code": ""}
+"""
 
 CR_start = """
 I will give you two examples below. Please answer my questions according to the format of this example.
