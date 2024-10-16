@@ -5,8 +5,7 @@ from transformers import (
     PreTrainedModel,
 )
 
-from prompts import CG_prompt
-from cocobench.src.core.generation import generate
+from core.generation import generate
 import os
 import torch
 
@@ -17,8 +16,8 @@ TOKEN = "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" # huggingface access token
 def generate_batch_completion(
     model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prompt: str, batch_size: int
 ) -> list[str]:
-    prompt_input = CG_prompt(prompt)
-    input_batch = [prompt_input for _ in range(batch_size)]
+    # prompt_input = CG_prompt(prompt)
+    input_batch = [prompt for _ in range(batch_size)]
     inputs = tokenizer(input_batch, return_tensors="pt").to(model.device) #return pytorch tensors
     input_length = inputs.input_ids.size(dim=1) # get sequence length
 
@@ -64,7 +63,7 @@ if __name__ == "__main__":
         ).eval()
     )
     
-    tasktype = 'CG'
+    tasktype = 'CR'
 
     generate(
         model,

@@ -1,6 +1,6 @@
-from util import write_jsonl
-from dataloader import read_problems
-from prompts import PROMPTS
+from module.util import write_jsonl
+from module.dataloader import read_problems
+from module.prompts import PROMPTS
 
 from transformers import (
     PreTrainedModel,
