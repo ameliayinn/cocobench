@@ -44,7 +44,7 @@ def generate_batch_completion(
     )
 
     batch_completions = tokenizer.batch_decode(
-        generated_ids[:, inputs.input_ids.size(dim=1):]
+        generated_ids[:, inputs.input_ids.size(dim=1):],
         # [ids[input_length:] for ids in generated_ids],
         skip_special_tokens=True,
     )
