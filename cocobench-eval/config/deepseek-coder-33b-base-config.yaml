@@ -1,7 +1,10 @@
+model_name: 'deepseek-coder-33b-base-config'
 model_path: ["/data/models/code_models/deepseek/deepseek-coder-33b-base/"]
 file_path: ["/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json", "/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json"]
-type: ["CUF", "CUF", "CUR", "CUR"]
-batch_size: 1
+type: ['CR']
+# type: ["CUF", "CUF", "CUR", "CUR"]
+batch_size: 4
 # output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
-output_path: "/data/project/dongmh/codebench/max_length_4096_result/"
-max_memory: '{3:"80GIB"}'
+output_path: "deepseek-coder-33b-base"
+# max_memory: '{3:"80GIB"}'
+max_memory: '{i: "20GiB" for i in range(8)}'

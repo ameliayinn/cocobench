@@ -44,27 +44,26 @@ def generate(
     # Initialize a progress bar with the total number of samples to generate
     pbar = tqdm.tqdm(total=len(problems) * num_samples_per_task)
     
+    templates = {
+        'CG': lambda p: {"description": p["description"], "incomplete_code": p["incomplete_code"], "complete_code": ""},
+        'CM': lambda p: {"description": p["description"], "buggy_code": p["buggy_code"], "corrected_code": ""},
+        # 'CM': lambda p: p["description"] + p["buggy_code"],
+        'CR': lambda p: {"requirement": "Check Python code snippets...", "problem_code": p["function"]["code"]},
+        'CUF': lambda p: {"code": p["code"], "input": p["input"], "output": ""},
+        'CUR': lambda p: {"code": p["code"], "input": "", "output": p["output"]}
+    }
+    
     # Loop over all tasks in the dataset
     for task_id in problems:
-        if tasktype == 'CG':
-            prompt_paradigm = {"description": problems[task_id]["description"], "incomplete_code": problems[task_id]["incomplete_code"], "complete_code": ""}
-        if tasktype == 'CM':
-            # prompt_paradigm = {"description": problems[task_id]["description"], "buggy_code": problems[task_id]["buggy_code"], "corrected_code": ""}
-            prompt_paradigm = problems[task_id]["buggy_code"]
-        if tasktype == 'CR':
-            prompt_paradigm = {"requirement": "Check Python code snippets for syntax errors, logic errors, performance issues, and security vulnerabilities. Function description of the function: " + problems[task_id]["requirement"], "problem_code": problems[task_id]["problem_code"], "performance_issues": "", "security_issues": "", "irregular_naming": "", "logical_errors": ""}
-        if tasktype == 'CUF':
-            prompt_paradigm = {"code": problems[task_id]["code"], "input": problems[task_id]["input"], "output": ""}
-        if tasktype == 'CUR':
-            prompt_paradigm = {"code": problems[task_id]["code"], "input": "", "output": problems[task_id]["output"]}
+        prompt_paradigm = templates[tasktype](problems[task_id])
         
         # Check if the prompt should replace spaces with tabs, if format_tabs is True
-        if format_tabs:
-            prompt = PROMPTS[tasktype][0] + str(prompt_paradigm).replace("    ", "\t") + PROMPTS[tasktype][1]
-        else:
-            # prompt = PROMPTS[tasktype][0] + str(prompt_paradigm) + PROMPTS[tasktype][1]
-            prompt = prompt_paradigm + PROMPTS[tasktype][1]
-
+        prompt = (
+            PROMPTS[tasktype][0] + str(prompt_paradigm) + PROMPTS[tasktype][1]
+            if not format_tabs else 
+            PROMPTS[tasktype][0] + str(prompt_paradigm).replace("    ", "\t") + PROMPTS[tasktype][1]
+        )
+        
         # Generate a batch of completions for the current task
         batch_completions = generate_batch_completion(
             model, tokenizer, prompt, num_samples_per_task
@@ -73,8 +72,8 @@ def generate(
         # For each completion in the batch, create a result dictionary and append it to samples
         for sample in batch_completions:
             result = dict(
-                # task_id=task_id,  # The task ID for which the completion was generated
-                # input=prompt,
+                task_id=task_id,  # The task ID for which the completion was generated
+                input=prompt,
                 output=sample,  # The generated completion text
             )
 

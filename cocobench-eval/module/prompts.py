@@ -54,7 +54,7 @@ Example two:
 Among them, the corrected_code part is the correct code obtained by correcting the problematic bug_code part according to the description part.
 """
 
-CM_end = """\nPlease correct the above function. Give only the code."""
+CM_end = """\nPlease correct the above code and show only the corrected code."""
 
 CR_start = """
 I will give you two examples below. Please answer my questions according to the format of this example.

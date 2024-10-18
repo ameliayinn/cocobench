@@ -9,7 +9,7 @@ from transformers import (
     PreTrainedModel,
 )
 
-from core.generation import generate
+from generation import generate
 
 # 加载 YAML 配置文件
 def load_config(config_path: str) -> dict:
@@ -23,7 +23,7 @@ def load_config(config_path: str) -> dict:
 def generate_batch_completion(
     model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prompt: str, batch_size: int
 ) -> list[str]:
-    input_batch = [prompt for _ in range(batch_size)]
+    input_batch = [prompt] * batch_size
     # inputs = tokenizer(input_batch, return_tensors="pt").to(model.device)  # Return PyTorch tensors
     # inputs = tokenizer(input_batch, return_tensors='pt', truncation=True, max_length=512).to(model.device)
     inputs = tokenizer(input_batch, return_tensors='pt', truncation=False).to(model.device)
@@ -33,15 +33,19 @@ def generate_batch_completion(
         **inputs,
         use_cache=True,
         max_new_tokens=512,
-        temperature=0.7,
+        num_return_sequences=1,
+        temperature=1,
+        top_k=50,
         top_p=0.95,
         do_sample=True,
+        bos_token_id=tokenizer.bos_token_id,
         eos_token_id=tokenizer.eos_token_id,
-        pad_token_id=tokenizer.pad_token_id,
+        pad_token_id=tokenizer.eos_token_id,
     )
 
     batch_completions = tokenizer.batch_decode(
-        [ids[input_length:] for ids in generated_ids],
+        generated_ids[:, inputs.input_ids.size(dim=1):]
+        # [ids[input_length:] for ids in generated_ids],
         skip_special_tokens=True,
     )
 
@@ -99,7 +103,7 @@ if __name__ == "__main__":
             device_map="auto",
             torch_dtype=torch.bfloat16,
             # max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
-            max_memory = {i: "10GiB" for i in range(8)}
+            max_memory = {i: "20GiB" for i in range(8)}
         ).eval()
     
 
@@ -118,5 +122,5 @@ if __name__ == "__main__":
             task_output_path,  # 使用为该 tasktype 定义的输出路径
             tasktype,          # 当前的 tasktype
             generate_batch_completion,
-            True,
+            False,
         )
