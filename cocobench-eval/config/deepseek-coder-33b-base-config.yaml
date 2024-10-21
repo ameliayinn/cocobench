@@ -1,6 +1,6 @@
 model_name: 'deepseek-coder-33b-base-config'
 model_path: ["/data/models/code_models/deepseek/deepseek-coder-33b-base/"]
-file_path: ["/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json", "/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json"]
+# file_path: ["/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json", "/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json"]
 type: ['CR']
 # type: ["CUF", "CUF", "CUR", "CUR"]
 batch_size: 4

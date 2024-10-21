@@ -1,7 +1,8 @@
+model_name: 'starcoder2-7b-config'
 model_path: ["/data/models/code_models/starcoder/starcoder2-7b/"]
-file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
+# file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
 type: ["CD"]
 batch_size: 1
 # output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
-output_path: "/data/project/dongmh/codebench/max_length_4096_result/"
+output_path: "starcoder2-7b"
 max_memory: '{2:"80GIB"}'

@@ -102,8 +102,8 @@ if __name__ == "__main__":
             model_path,  # 从本地路径加载模型
             device_map="auto",
             torch_dtype=torch.bfloat16,
-            # max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
-            max_memory = {i: "20GiB" for i in range(8)}
+            max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
+            # max_memory = {i: "20GiB" for i in range(8)}
         ).eval()
     
 

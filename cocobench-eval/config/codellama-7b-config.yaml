@@ -1,8 +1,9 @@
 model_name: 'codellama-7b-config'
 model_path: ["/data/models/code_models/codellama/CodeLlama-7b-hf/"]
-file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
+# file_path: ["/data/project/dongmh/codebench/data/debug_SyntaxError.json"]
 type: ["CM"]
 batch_size: 1
 # output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
 output_path: "CodeLlama-7b-hf"
-max_memory: '{0:"80GIB"}'
+# max_memory: '{0:"80GIB"}'
+max_memory: '{i: "20GiB" for i in range(8)}'
