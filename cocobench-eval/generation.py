@@ -46,9 +46,9 @@ def generate(
     
     templates = {
         'CG': lambda p: {"description": p["description"], "incomplete_code": p["incomplete_code"], "complete_code": ""},
-        'CM': lambda p: {"description": p["description"], "buggy_code": p["buggy_code"], "corrected_code": ""},
+        'CM': lambda p: {"description": p["description"], "bug_code": p["bug_code"], "corrected_code": ""},
         # 'CM': lambda p: p["description"] + p["buggy_code"],
-        'CR': lambda p: {"requirement": "Check Python code snippets...", "problem_code": p["function"]["code"]},
+        'CR': lambda p: {"requirement": "Check Python code snippets for syntax errors, logic errors, performance issues, and security vulnerabilities. Function description of the function: ", "problem_code": p["code"]},
         'CUF': lambda p: {"code": p["code"], "input": p["input"], "output": ""},
         'CUR': lambda p: {"code": p["code"], "input": "", "output": p["output"]}
     }
@@ -75,22 +75,36 @@ def generate(
                 result = dict(
                     task_id=task_id,
                     # input=prompt,
-                    output=sample,
+                    content=sample,
                     groundtruth=problems[task_id]["complete_code"],
                 )
             if tasktype == 'CM':
                 result = dict(
                     task_id=task_id,  # The task ID for which the completion was generated
                     # input=prompt,
-                    output=sample,  # The generated completion text
+                    content=sample,  # The generated completion text
                     groundtruth=problems[task_id]["corrected_code"],
                 )
             if tasktype == 'CR':
                 result = dict(
                     task_id=task_id,
                     # input=prompt,
-                    output=sample,
-                    groundtruth=problems[task_id]["result"],
+                    content=sample,
+                    groundtruth=problems[task_id]["issue_catagories"],
+                )
+            if tasktype == 'CUF':
+                result = dict(
+                    task_id=task_id,
+                    # input=prompt,
+                    content=sample,
+                    groundtruth=problems[task_id]["output"],
+                )
+            if tasktype == 'CUR':
+                result = dict(
+                    task_id=task_id,
+                    # input=prompt,
+                    content=sample,
+                    groundtruth=problems[task_id]["input"],
                 )
 
             # Add the result to the list of samples

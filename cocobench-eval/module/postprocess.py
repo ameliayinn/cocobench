@@ -28,7 +28,7 @@ def process_CG_dataset(sample, problems, test_groundtruth=False):
     task_id = sample["task_id"]
     language = task_id.split("/")[0].lower() # 识别编程语言
     if test_groundtruth:
-        code = sample.get("complete_code", None) # 从sample中获取reference，如果没有，code设置为None
+        code = sample.get("groundtruth", None) # 从sample中获取reference，如果没有，code设置为None
         if code is None:
             code = sample.get("canonical_solution", None)
             if code is None:
