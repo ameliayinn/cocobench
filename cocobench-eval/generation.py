@@ -71,11 +71,27 @@ def generate(
 
         # For each completion in the batch, create a result dictionary and append it to samples
         for sample in batch_completions:
-            result = dict(
-                task_id=task_id,  # The task ID for which the completion was generated
-                input=prompt,
-                output=sample,  # The generated completion text
-            )
+            if tasktype == 'CG':
+                result = dict(
+                    task_id=task_id,
+                    # input=prompt,
+                    output=sample,
+                    groundtruth=problems[task_id]["complete_code"],
+                )
+            if tasktype == 'CM':
+                result = dict(
+                    task_id=task_id,  # The task ID for which the completion was generated
+                    # input=prompt,
+                    output=sample,  # The generated completion text
+                    groundtruth=problems[task_id]["corrected_code"],
+                )
+            if tasktype == 'CR':
+                result = dict(
+                    task_id=task_id,
+                    # input=prompt,
+                    output=sample,
+                    groundtruth=problems[task_id]["result"],
+                )
 
             # Add the result to the list of samples
             samples += [result]
