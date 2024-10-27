@@ -42,14 +42,14 @@ def read_jsonl(taskdirname: str) -> Iterable[Dict]:
     Yields:
         dict: A dictionary representing each parsed line of the .jsonl files.
     """
-    
+    '''
     with open("/data/ywj/cocobench/cocobench-eval/data/CR/CR.jsonl", "r") as fp:
         for line in fp:
             # Skip empty or whitespace-only lines
             if any(not x.isspace() for x in line):
                 yield json.loads(line)  # Parse the line as JSON and yield it
-    
-    '''# Walk through the directory and list all files
+    '''
+    # Walk through the directory and list all files
     for root, _, files in os.walk(taskdirname):
         for file in files:
             # Process only .jsonl and .jsonl.gz files
@@ -71,4 +71,3 @@ def read_jsonl(taskdirname: str) -> Iterable[Dict]:
                             # Skip empty or whitespace-only lines
                             if any(not x.isspace() for x in line):
                                 yield json.loads(line)  # Parse the line as JSON and yield it
-'''

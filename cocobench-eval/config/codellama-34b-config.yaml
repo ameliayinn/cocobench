@@ -1,8 +1,6 @@
 model_name: 'codellama-34b-config'
 model_path: ["/data/models/code_models/codellama/CodeLlama-34b-hf/"]
-# file_path: ["/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json", "/data/project/dongmh/codebench/data/leetcode_C++.json", "/data/project/dongmh/codebench/data/leetcode_java.json"]
-type: ["CUF", "CUF", "CUR", "CUR"]
+type: ["CG", "CM", "CR", "CUF", "CUR"]
 batch_size: 1
-# output_path: "/data/project/pj/h800-4/API/rag/codebench/code_review_result.jsonl"
 output_path: "codellama-34b-config"
-max_memory: '{2:"80GIB"}'
+max_memory: '{2:"80GIB", 3:"80GIB"}'
