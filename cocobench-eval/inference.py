@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     # 从 YAML 文件中获取模型路径、输出路径、batch_size 和 max_memory 等配置
     model_path = config['model_path'][0]  # 解析模型路径
-    output_path = os.path.join('results', config['output_path'])   # 解析输出路径
+    output_path = os.path.join('./cocobench-eval/results', config['output_path'])   # 解析输出路径
     batch_size = config.get('batch_size', 1)  # 如果没有定义 batch_size，默认使用 1
     max_memory = eval(config['max_memory'])   # 解析 max_memory，使用 eval 将字符串转为字典
 

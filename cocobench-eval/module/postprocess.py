@@ -75,7 +75,7 @@ def call_llama_model(messages):
     return generated_text.strip()
 
 if __name__ == '__main__':
-    results_directory = './results/'
+    results_directory = './cocobench-eval/results/'
     dirnames = os.listdir(results_directory)
     # Traverse all files in the results directory
     for dirname in dirnames:

@@ -2,6 +2,8 @@ import json
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 import os
+import sys
+from tqdm import tqdm
 from sentence_transformers import SentenceTransformer, util
 from collections import Counter
 
@@ -18,10 +20,16 @@ embedder = SentenceTransformer('all-MiniLM-L6-v2')
 def process_jsonl(input_file, output_file):
     """Process the JSONL file, calculating similarity scores and writing the results."""
     with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
-        for line in infile:
+        lines = infile.readlines()
+        # Use tqdm to show progress bar for processing lines
+        for line in tqdm(lines, desc=f"Processing {os.path.basename(input_file)}", total=len(lines)):
             data = json.loads(line)
             content = data['content']
-            groundtruth = data['groundtruth']
+            groundtruth = str(data['groundtruth'])
+            
+            # Skip if content or groundtruth is empty
+            if not content or not groundtruth:
+                continue
             
             # Calculate cosine similarity
             similarity_score_cos = calculate_similarity_cos(content, groundtruth)
@@ -96,11 +104,13 @@ def calculate_similarity_rouge(content, groundtruth):
     return f1_score * 100
 
 if __name__ == '__main__':
-    results_directory = '/data/ywj/cocobench/results/'
-    
+    results_directory = './cocobench-eval/results/'
+    dirnames = os.listdir(results_directory)
     # Traverse all files in the results directory
-    for filename in os.listdir(results_directory):
-        if filename.startswith("results_") and filename.endswith(".jsonl"):
-            input_file = os.path.join(results_directory, filename)
-            output_file = os.path.join(results_directory, filename.replace("results_", "evaluated_"))
-            process_jsonl(input_file, output_file)
+    for dirname in dirnames:
+        if dirname.startswith(sys.argv[1]):
+            for filename in os.listdir(os.path.join(results_directory, dirname)):
+                if filename.startswith("processed_") and filename.endswith(".jsonl"):
+                    input_file = os.path.join(results_directory, dirname, filename)
+                    output_file = os.path.join(results_directory, dirname, filename.replace("processed_", "evaluated_"))
+                    process_jsonl(input_file, output_file)
