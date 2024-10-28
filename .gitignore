@@ -1,2 +1,3 @@
 .DS_Store
-#cocobench-eval/archive
+cocobench-eval/archive
+cocobench-eval/__pycache__
