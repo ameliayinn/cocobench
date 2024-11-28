@@ -29,7 +29,9 @@ def process_jsonl(input_file, output_file):
             
             # Skip if content or groundtruth is empty
             if not content or not groundtruth:
-                continue
+                data['similarity_score_cos'] = 0
+                data['similarity_score_jaccard'] = 0
+                data['similarity_score_rouge'] = 0
             
             # Calculate cosine similarity
             similarity_score_cos = calculate_similarity_cos(content, groundtruth)
