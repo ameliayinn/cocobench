@@ -6,3 +6,5 @@ batch_size: 1
 output_path: "CodeLlama-7b-hf"
 max_memory: '{0:"80GIB"}'
 # max_memory: '{i: "20GiB" for i in range(8)}'
+top_k: [10, 14, 18, 22, 26, 30, 34, 38, 42, 46, 50]
+top_p: [0.75, 0.77, 0.79, 0.81, 0.83, 0.85, 0.87, 0.89, 0.91, 0.93, 0.95]
