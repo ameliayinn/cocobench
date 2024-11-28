@@ -91,14 +91,6 @@ if __name__ == "__main__":
     )
 
     # 加载本地保存的模型
-    '''model = torch.compile(
-        AutoModelForCausalLM.from_pretrained(
-            model_path,  # 从本地路径加载模型
-            device_map="auto",
-            torch_dtype=torch.bfloat16,
-            max_memory=max_memory,  # 使用 YAML 文件中定义的内存配置
-        ).eval()
-    )'''
     model = AutoModelForCausalLM.from_pretrained(
             model_path,  # 从本地路径加载模型
             device_map="auto",
