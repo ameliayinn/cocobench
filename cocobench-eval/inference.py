@@ -21,7 +21,7 @@ def load_config(config_path: str) -> dict:
 
 @torch.inference_mode()
 def generate_batch_completion(
-    model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prompt: str, batch_size: int
+    model: PreTrainedModel, tokenizer: PreTrainedTokenizer, prompt: str, batch_size: int, top_k: int, top_p: int
 ) -> list[str]:
     input_batch = [prompt] * batch_size
     # inputs = tokenizer(input_batch, return_tensors="pt").to(model.device)  # Return PyTorch tensors
@@ -35,8 +35,8 @@ def generate_batch_completion(
         max_new_tokens=512,
         num_return_sequences=1,
         temperature=1,
-        top_k=50,
-        top_p=0.95,
+        top_k=top_k,
+        top_p=top_p,
         do_sample=True,
         bos_token_id=tokenizer.bos_token_id,
         eos_token_id=tokenizer.eos_token_id,
@@ -75,8 +75,9 @@ if __name__ == "__main__":
     batch_size = config.get('batch_size', 1)  # 如果没有定义 batch_size，默认使用 1
     max_memory = eval(config['max_memory'])   # 解析 max_memory，使用 eval 将字符串转为字典
 
-    # 获取 tasktype 列表
     tasktypes = config['type']  # 解析多个 tasktype
+    top_ks = config['top_k']
+    top_ps = config['top_p']
 
     # num_samples_per_task = 10
     num_samples_per_task = 1
@@ -106,21 +107,29 @@ if __name__ == "__main__":
             # max_memory = {i: "20GiB" for i in range(8)}
         ).eval()
     
-
-    # 遍历每个 tasktype，分别调用 generate 函数
+    
     for tasktype in tasktypes:
-        # 为每个 tasktype 创建单独的输出目录或文件名
-        task_output_path = os.path.join(output_path, f"result_{tasktype}.jsonl")
+        
+        print(f"Processing tasktype: {tasktype}")
+        
+        for i in range(len(top_ks)):
+            
+            top_k = top_ks[i]
+            top_p = top_ps[i]
+            
+            task_output_path = os.path.join(output_path, f"result_{tasktype}_{top_k}_0{int(top_p*100)}.jsonl")    
+            print(f"Using top_k: {top_k}, top_p: {top_p} for tasktype: {tasktype}, output to: {task_output_path}")
 
-        print(f"Processing tasktype: {tasktype}, output to: {task_output_path}")
-
-        # 调用 generate 函数进行推理
-        generate(
-            model,
-            tokenizer,
-            num_samples_per_task,
-            task_output_path,  # 使用为该 tasktype 定义的输出路径
-            tasktype,          # 当前的 tasktype
-            generate_batch_completion,
-            False,
-        )
+            # 调用 generate 函数进行推理
+            generate(
+                model,
+                tokenizer,
+                num_samples_per_task,
+                task_output_path,  # 使用为该 tasktype 定义的输出路径
+                tasktype,          # 当前的 tasktype
+                # generate_batch_completion,
+                lambda model, tokenizer, prompt, batch_size: generate_batch_completion(
+                    model, tokenizer, prompt, batch_size, top_ks[i], top_ps[i]  # 传入 top_k, top_p
+                    ),
+                False,
+            )
