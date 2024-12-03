@@ -7,7 +7,7 @@ from tqdm import tqdm
 from sentence_transformers import SentenceTransformer, util
 from collections import Counter
 
-model_path = "/data/models/Llama-3.2-1B-Instruct/"
+model_path = "/data/models/Meta-Llama-3.1-8B-Instruct/"
 
 # Load the tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained(model_path)

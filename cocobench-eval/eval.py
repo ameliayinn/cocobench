@@ -1,19 +1,17 @@
 import os
 import json
 import torch
+import sys
+from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import logging
+logging.set_verbosity_error()
 
 # Define the evaluation prompt
-PROMPT = (
-    "You are an evaluation expert tasked with verifying the correctness of algorithmic solutions. "
-    "Your responsibilities include analyzing code snippets, validating them against problem descriptions and examples, "
-    "and assessing their accuracy based on the expected outputs.\n\n"
-    "Your role requires the following:\n"
-    "1. Strict Adherence to Input Examples: Ensure the provided `content` code solves all examples as intended in the problem description.\n"
-    "2. Comparison with Groundtruth: Validate the `content` code against the `groundtruth` solution to ensure logical correctness and conformity.\n"
-    "3. Edge Case Consideration: Check if the `content` code addresses potential edge cases implied by the problem constraints.\n\n"
+PROMPT_CG = (
+    "You are a comparison expert tasked with determining whether two pieces of code snippet, referred to as 'content' and 'groundtruth', are equivalent."
     "Rules for Evaluation:\n"
-    "- Only analyze the code and examples; do not infer or assume unstated requirements.\n"
+    "- Check if the code in content is functional and gives out the right output.\n"
     "- Do not provide explanations, justifications, or additional information in your output.\n\n"
     "Output Requirements:\n"
     "- Respond in a structured JSON format with only the following fields:\n"
@@ -23,7 +21,56 @@ PROMPT = (
     "}"
 )
 
-def evaluate_sample(model, tokenizer, sample, device="cuda:0"):
+PROMPT_CM = PROMPT_CG
+
+PROMPT_CR = (
+    "You are a comparison expert tasked with determining whether two pieces of text, referred to as 'content' and 'groundtruth', are equivalent."
+    "The text is relevant to errors in code snippets."
+    "Rules for Evaluation:\n"
+    "- Do not provide explanations, justifications, or additional information in your output.\n\n"
+    "Output Requirements:\n"
+    "- Respond in a structured JSON format with only the following fields:\n"
+    "{\n"
+    "  \"task_id\": \"<task_id>\",\n"
+    "  \"evaluation\": \"Correct\" or \"Incorrect\"\n"
+    "}"
+)
+
+PROMPT_CUF = (
+    "You are a comparison expert tasked with determining whether two pieces of text, referred to as 'content' and 'groundtruth', are equivalent."
+    "The text is relevant to outputs of code snippets."
+    "Rules for Evaluation:\n"
+    "- Do not provide explanations, justifications, or additional information in your output.\n\n"
+    "Output Requirements:\n"
+    "- Respond in a structured JSON format with only the following fields:\n"
+    "{\n"
+    "  \"task_id\": \"<task_id>\",\n"
+    "  \"evaluation\": \"Correct\" or \"Incorrect\"\n"
+    "}"
+)
+
+PROMPT_CUR = (
+    "You are a comparison expert tasked with determining whether two pieces of text, referred to as 'content' and 'groundtruth', are equivalent."
+    "The text is relevant to inputs of code snippets."
+    "Rules for Evaluation:\n"
+    "- Do not provide explanations, justifications, or additional information in your output.\n\n"
+    "Output Requirements:\n"
+    "- Respond in a structured JSON format with only the following fields:\n"
+    "{\n"
+    "  \"task_id\": \"<task_id>\",\n"
+    "  \"evaluation\": \"Correct\" or \"Incorrect\"\n"
+    "}"
+)
+
+PROMPTS = {
+    "CG": PROMPT_CG,
+    "CM": PROMPT_CM,
+    "CR": PROMPT_CR,
+    "CUF": PROMPT_CUF,
+    "CUR": PROMPT_CUR
+}
+
+def evaluate_sample(model, tokenizer, tasktype, sample, device="cuda:0"):
     """Generate an evaluation for a single sample and calculate token usage."""
     try:
         task_id = sample.get("task_id", "unknown")
@@ -31,7 +78,7 @@ def evaluate_sample(model, tokenizer, sample, device="cuda:0"):
         groundtruth = sample.get("groundtruth", "")
         
         # Append the prompt to the content
-        prompt = f"Task ID: {task_id}\n\n{PROMPT}\n\nContent:\n{content}\n\nGroundtruth:\n{groundtruth}\n"
+        prompt = f"Task ID: {task_id}\n\n{PROMPTS[tasktype]}\n\nContent:\n{content}\n\nGroundtruth:\n{groundtruth}\n"
         
         # Tokenize and generate response
         inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512).to(device)
@@ -39,7 +86,7 @@ def evaluate_sample(model, tokenizer, sample, device="cuda:0"):
         
         outputs = model.generate(
             **inputs,
-            max_new_tokens=150,
+            max_new_tokens=600,
             temperature=0.7,
             top_k=50,
             top_p=0.9,
@@ -49,9 +96,12 @@ def evaluate_sample(model, tokenizer, sample, device="cuda:0"):
         # Decode the model's response
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         
+        # Extract only the evaluation part (e.g., "Correct" or "Incorrect")
+        evaluation = response.strip().split("\n")[-1]  # Assume the evaluation is the last line
+        
         return {
             "task_id": task_id,
-            "evaluation": response.strip(),
+            "evaluation": evaluation,
             "token_count": token_count
         }
     except Exception as e:
@@ -62,23 +112,27 @@ def evaluate_sample(model, tokenizer, sample, device="cuda:0"):
             "token_count": 0  # Assign 0 token count in case of failure
         }
 
-def process_files(input_dir, output_dir, model, tokenizer, device="cuda:0"):
+def process_files(input_dir, results_dir, evaluations_dir, model, tokenizer, device="cuda:0"):
     """Process all JSONL files in the input directory and save evaluations to the output directory."""
-    for root, _, files in os.walk(input_dir):
-        for file in files:
-            if file.endswith(".jsonl"):
+    for root, _, files in os.walk(os.path.join(results_dir, input_dir)):
+        for file in tqdm(files, desc=f"Processing directory: {input_dir}"):
+            if file.startswith("result_") and file.endswith(".jsonl"):
+                tasktype = next((key for key in PROMPTS.keys() if key in file), None)
+                if not tasktype:
+                    print(f"Skipping file {file} - unknown task type.")
+                    continue
+                
                 input_path = os.path.join(root, file)
-                relative_path = os.path.relpath(input_path, input_dir)
-                output_path = os.path.join(output_dir, relative_path)
+                output_path = os.path.join(evaluations_dir, input_dir, file.replace("result_", "evaluated_"))
                 
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 
                 # Read and process each line in the JSONL file
                 with open(input_path, "r") as infile, open(output_path, "w") as outfile:
-                    for line in infile:
+                    for line in tqdm(infile, desc=f"Processing file: {file}"):
                         try:
                             sample = json.loads(line)
-                            evaluation = evaluate_sample(model, tokenizer, sample, device=device)
+                            evaluation = evaluate_sample(model, tokenizer, tasktype, sample, device=device)
                             # Write the evaluation result back to a file
                             outfile.write(json.dumps(evaluation) + "\n")
                         except json.JSONDecodeError as e:
@@ -89,14 +143,26 @@ def process_files(input_dir, output_dir, model, tokenizer, device="cuda:0"):
                             print(f"Unexpected error processing file {input_path}: {str(e)}")
 
 if __name__ == "__main__":
-    # Define input and output directories
-    input_dir = "./results/CodeLlama-7b-hf"  # Adjust as necessary
-    output_dir = "./evaluations/CodeLlama-7b-hf"
+    if len(sys.argv) < 3:
+        print("Usage: python script.py <device>")
+        sys.exit(1)
+    
+    device_number = sys.argv[2]
+    device = f"cuda:{device_number}"
+    
+    results_dir = "./cocobench-eval/results"
+    evaluations_dir = "./cocobench-eval/evaluations"
+    
+    # Get all subdirectories in the results directory
+    # input_dirs = [os.path.join(results_dir, subdir) for subdir in os.listdir(results_dir) if os.path.isdir(os.path.join(results_dir, subdir))]
+    input_dirs = [sys.argv[1]]
 
     # Load model and tokenizer
-    model_path = "/data/models/code_models/deepseek/deepseek-coder-6.7b-instruct"  # Replace with the actual model path
+    model_path = "/data/models/Meta-Llama-3.1-8B-Instruct/"
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = AutoModelForCausalLM.from_pretrained(model_path).eval().to("cuda:2")  # Force use of cuda:0
+    model = AutoModelForCausalLM.from_pretrained(model_path).eval().to(device)
 
     # Process files
-    process_files(input_dir, output_dir, model, tokenizer, device="cuda:2")
+    for input_dir in input_dirs:
+        print(f"Processing {input_dir} -> {evaluations_dir}")
+        process_files(input_dir, results_dir, evaluations_dir, model, tokenizer, device=device)
