@@ -1,0 +1,12 @@
+{"task_id": "cpp/0", "evaluation": "  \"task_id\": \"cpp", "token_count": 114}
+{"task_id": "cpp/1", "evaluation": "302", "token_count": 110}
+{"task_id": "cpp/2", "evaluation": "    groundtruth = [int(x", "token_count": 114}
+{"task_id": "cpp/3", "evaluation": "            return", "token_count": 117}
+{"task_id": "cpp/4", "evaluation": "153", "token_count": 110}
+{"task_id": "cpp/5", "evaluation": "content = \"Answer\\n", "token_count": 114}
+{"task_id": "cpp/6", "evaluation": "```", "token_count": 110}
+{"task_id": "cpp/7", "evaluation": "        cout << arr[i] << \" \";", "token_count": 114}
+{"task_id": "cpp/8", "evaluation": "}  |", "token_count": 115}
+{"task_id": "cpp/9", "evaluation": "-1", "token_count": 122}
+{"task_id": "cpp/10", "evaluation": "{\"task_id\": \"", "token_count": 114}
+{"task_id": "cpp/11", "evaluation": "#include <stdexcept", "token_count": 114}

@@ -1,0 +1,35 @@
+{"task_id": "python/0", "evaluation": "}", "token_count": 936}
+{"task_id": "python/1", "evaluation": "Since the content correctly", "token_count": 956}
+{"task_id": "python/2", "evaluation": "print(json.dumps(result))", "token_count": 1262}
+{"task_id": "python/3", "evaluation": "}", "token_count": 1230}
+{"task_id": "python/4", "evaluation": "}", "token_count": 1239}
+{"task_id": "python/5", "evaluation": "    high = len(arr) -", "token_count": 504}
+{"task_id": "python/6", "evaluation": "        print('Error:',", "token_count": 1280}
+{"task_id": "python/7", "evaluation": "Note: The content and groundtruth are provided in", "token_count": 1280}
+{"task_id": "python/8", "evaluation": "    \"syntax_errors\": \"numbers = [0, 1, 2", "token_count": 1280}
+{"task_id": "python/9", "evaluation": "    \"", "token_count": 1280}
+{"task_id": "python/10", "evaluation": "}", "token_count": 689}
+{"task_id": "python/11", "evaluation": "# In[", "token_count": 1280}
+{"task_id": "python/12", "evaluation": "}", "token_count": 1096}
+{"task_id": "python/13", "evaluation": "```", "token_count": 760}
+{"task_id": "python/14", "evaluation": "    \"logical_errors\": \"print('Welcome, {}'.format(username", "token_count": 1280}
+{"task_id": "python/15", "evaluation": "}", "token_count": 1079}
+{"task_id": "python/16", "evaluation": "}", "token_count": 1132}
+{"task_id": "python/17", "evaluation": "    print(check_user_permission({'role': 'unknown'}", "token_count": 1280}
+{"task_id": "python/18", "evaluation": "    \"", "token_count": 1280}
+{"task_id": "python/19", "evaluation": "{'security_issues': {'lines': [\"salt =", "token_count": 554}
+{"task_id": "python/20", "evaluation": "        if problem.strip():", "token_count": 1280}
+{"task_id": "python/21", "evaluation": "{'logical_errors': {'lines': ['if lower_case_s ==  reversed_s", "token_count": 552}
+{"task_id": "python/22", "evaluation": "        return 1", "token_count": 1280}
+{"task_id": "python/23", "evaluation": "}", "token_count": 1145}
+{"task_id": "python/24", "evaluation": "}", "token_count": 1159}
+{"task_id": "python/25", "evaluation": "}", "token_count": 1135}
+{"task_id": "python/26", "evaluation": "    \"security_issues\": \"password =", "token_count": 1280}
+{"task_id": "python/27", "evaluation": "```", "token_count": 1065}
+{"task_id": "python/28", "evaluation": "# # Error", "token_count": 1280}
+{"task_id": "python/29", "evaluation": "}", "token_count": 681}
+{"task_id": "python/30", "evaluation": "        \"description\": \"The logic incorrectly skips adding 'https' URLs to the list by using", "token_count": 1026}
+{"task_id": "python/31", "evaluation": "evaluation: Incorrect", "token_count": 1107}
+{"task_id": "python/32", "evaluation": "The content is a JSON object with keys representing different types of errors and values representing the code snippets that contain those errors.", "token_count": 750}
+{"task_id": "python/33", "evaluation": "{'logical_errors': 2, 'runtime_errors': 4,'syntax_errors': 0, 'total_errors': 6}", "token_count": 1050}
+{"task_id": "python/34", "evaluation": "        if list1[i]", "token_count": 1280}

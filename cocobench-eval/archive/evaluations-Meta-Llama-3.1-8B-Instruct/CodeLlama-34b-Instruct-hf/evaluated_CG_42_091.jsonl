@@ -1,0 +1,131 @@
+{"task_id": "java/0", "evaluation": "            if (", "token_count": 231}
+{"task_id": "java/1", "evaluation": "        }", "token_count": 340}
+{"task_id": "java/2", "evaluation": "        int z = nums[2];", "token_count": 246}
+{"task_id": "java/3", "evaluation": "}  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br", "token_count": 512}
+{"task_id": "java/4", "evaluation": "        return ans > Long.MIN_VALUE / 4? ans", "token_count": 303}
+{"task_id": "java/5", "evaluation": "Again, please note that this is just a potential issue and not a bug in the provided code. The code still passes the test cases and produces the correct output for the given inputs.", "token_count": 512}
+{"task_id": "java/6", "evaluation": "            if (!vis[j] && inCircle(x1, y1", "token_count": 512}
+{"task_id": "java/7", "evaluation": "```", "token_count": 182}
+{"task_id": "java/8", "evaluation": "}", "token_count": 326}
+{"task_id": "java/9", "evaluation": "The code in the content is incorrect, but it is not the task to correct the code. The task", "token_count": 512}
+{"task_id": "java/10", "evaluation": "Therefore, the evaluation of the two code snippets is \"Incorrect\" because the first code snippet is less efficient and may have some edge cases that are not handled correctly. However, the two code snippets have the same output for the given test cases, so the evaluation", "token_count": 512}
+{"task_id": "java/11", "evaluation": "            if (curCnt ==", "token_count": 253}
+{"task_id": "java/12", "evaluation": "The final answer is: {\"task_id\": \"java/12\", \"evaluation\": \"Correct", "token_count": 233}
+{"task_id": "java/13", "evaluation": "        for (int i = 0; i < nums.length - dist; i", "token_count": 512}
+{"task_id": "java/14", "evaluation": "            while (c > 0", "token_count": 512}
+{"task_id": "java/15", "evaluation": "    private int x;", "token_count": 512}
+{"task_id": "java/16", "evaluation": "import java", "token_count": 226}
+{"task_id": "java/17", "evaluation": "    public static void main", "token_count": 395}
+{"task_id": "java/18", "evaluation": "  \"evaluation", "token_count": 512}
+{"task_id": "java/19", "evaluation": "// nums", "token_count": 512}
+{"task_id": "java/20", "evaluation": "  \"", "token_count": 512}
+{"task_id": "java/21", "evaluation": "Let me know if you have any questions or need", "token_count": 260}
+{"task_id": "java/22", "evaluation": "        for", "token_count": 333}
+{"task_id": "java/23", "evaluation": "The provided code in the groundtruth snippet is incorrect because it incorrectly handles the case when k > 0. In this case, it should add k to the answer if s is non-negative and add the minimum of k + s and 0 to the answer if s is negative. However, in the groundtruth code, it incorrectly adds Math.max(k + s, 0) to the answer when k > 0 and s is non-negative. This results in incorrect results. Therefore, the evaluation result is Incorrect. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .", "token_count": 409}
+{"task_id": "java/24", "evaluation": "To verify if the content code gives the right output, we need to compare its output with the", "token_count": 304}
+{"task_id": "python/0", "evaluation": "}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\": \"Incorrect\"}  # The final answer is: {\"task_id\": \"python/0\", \"evaluation\":", "token_count": 393}
+{"task_id": "python/1", "evaluation": "# Correct if the content code is equivalent to the groundtruth code; otherwise", "token_count": 504}
+{"task_id": "python/2", "evaluation": "    def __", "token_count": 506}
+{"task_id": "python/3", "evaluation": "  \"task_id\": \"", "token_count": 311}
+{"task_id": "python/4", "evaluation": "The given content and groundtruth code snippets are not equivalent. The groundtruth code snippet has a missing import statement for the 'deque' and 'count' classes, which are used in the", "token_count": 301}
+{"task_id": "python/5", "evaluation": "This code uses the difflib library to compare the two code snippets", "token_count": 482}
+{"task_id": "python/6", "evaluation": "    while", "token_count": 347}
+{"task_id": "python/7", "evaluation": "            return rt", "token_count": 299}
+{"task_id": "python/8", "evaluation": "            while", "token_count": 299}
+{"task_id": "python/9", "evaluation": "            ans.append", "token_count": 512}
+{"task_id": "python/10", "evaluation": "        # op=1\uff0c\u6dfb\u52a0\u4e00\u4e2a", "token_count": 512}
+{"task_id": "python/11", "evaluation": "            t.update((i - pre) % n, op)", "token_count": 512}
+{"task_id": "python/12", "evaluation": "Note that the `compile` and `eval` functions are used to evaluate the code, and the `ast` module", "token_count": 241}
+{"task_id": "python/13", "evaluation": "Please let me know if this is correct. I have followed the rules and provided the code in the required format.  }``", "token_count": 426}
+{"task_id": "python/14", "evaluation": "        return {\"", "token_count": 274}
+{"task_id": "python/15", "evaluation": "The code comparison tool will check if the content code snippet is functional and gives the right output and will output \"Correct\" if the", "token_count": 512}
+{"task_id": "python/16", "evaluation": "```  The provided ground truth code snippet has a different implementation than the content code snippet. The main difference lies in the calculation of `cnt0` and the break condition in the inner loop. The ground truth code uses `cnt0 = k - i + 1` while the content code uses `cnt0 = a[k + 1] - a", "token_count": 512}
+{"task_id": "python/17", "evaluation": "        a =", "token_count": 367}
+{"task_id": "python/18", "evaluation": "    def canReachCorner(self, X: int, Y: int,", "token_count": 512}
+{"task_id": "python/19", "evaluation": "  \"evaluation", "token_count": 512}
+{"task_id": "python/20", "evaluation": "task", "token_count": 512}
+{"task_id": "python/21", "evaluation": "However, looking at the provided content and groundtruth code, the content code seems to have a logical error in the check function. It should return False when grid[i][j] == 0 and grid[j][i] == 1, not continue. The corrected groundtruth code has the correct condition in the check function. Therefore, the evaluation should be \"Incorrect\" for the provided", "token_count": 308}
+{"task_id": "python/22", "evaluation": "        edges = [[0, 1], [1, 2], [2, 3], [3", "token_count": 512}
+{"task_id": "python/23", "evaluation": "        for edge in", "token_count": 454}
+{"task_id": "python/24", "evaluation": "Please note that this code assumes that the code snippets are in a format that can be executed by the `exec` function. If the code snippets contain syntax errors or use external modules that are not", "token_count": 466}
+{"task_id": "python/25", "evaluation": "However, upon re-examining the code, it seems that the groundtruth code is actually correct. The groundtruth code uses the", "token_count": 512}
+{"task_id": "python/26", "evaluation": "We then iterate over the list of numbers, and for each number, we find its corresponding", "token_count": 337}
+{"task_id": "python/27", "evaluation": "The test cases provided cover various scenarios, including edge cases such as an empty array and an array with", "token_count": 464}
+{"task_id": "python/28", "evaluation": "    # In a real scenario", "token_count": 256}
+{"task_id": "python/29", "evaluation": "nums2 = [1, 2, 3", "token_count": 512}
+{"task_id": "python/30", "evaluation": "        self.assertEqual(solution.minSum(nums1, nums", "token_count": 326}
+{"task_id": "python/31", "evaluation": "    def minIncrementOperations(self, nums: List[int", "token_count": 205}
+{"task_id": "python/32", "evaluation": "This code defines a function `evaluate_content` that takes in the content and groundtruth code snippets as input. It attempts to execute the content code using the `exec` function, passing in a dummy `dfs` function to prevent any actual function execution. If the execution is successful, it returns a JSON response indicating that the content code is correct. If an exception occurs during execution, it returns a", "token_count": 512}
+{"task_id": "python/33", "evaluation": "class", "token_count": 293}
+{"task_id": "python/34", "evaluation": "  \"task_id\": \"python/34", "token_count": 512}
+{"task_id": "python/35", "evaluation": "        def do(o: int, l: int, r: int, add: int)", "token_count": 512}
+{"task_id": "python/36", "evaluation": "        res =", "token_count": 512}
+{"task_id": "python/37", "evaluation": "                res = query_and_minus1_0(o * 2", "token_count": 512}
+{"task_id": "python/38", "evaluation": "# The content code also handles the case when the string has only eleven characters which is not present in the groundtruth code", "token_count": 383}
+{"task_id": "python/39", "evaluation": "import unittest", "token_count": 361}
+{"task_id": "python/40", "evaluation": "        return ans ** 2 % 1_", "token_count": 253}
+{"task_id": "python/41", "evaluation": "    return set(y - x for x, y in combinations(a,", "token_count": 253}
+{"task_id": "python/42", "evaluation": "        dp = [[0] * (n + 1) for _ in", "token_count": 512}
+{"task_id": "python/43", "evaluation": "        ans = sum(dis[ord(x) - ord('a')][ord(y) - ord('a')] for x, y in zip(source, target", "token_count": 512}
+{"task_id": "python/44", "evaluation": "        x = ord(x", "token_count": 512}
+{"task_id": "python/45", "evaluation": "                if i < size", "token_count": 512}
+{"task_id": "python/46", "evaluation": "        changed = [\"abcd\", \"cdef\", \"abef\", \"", "token_count": 512}
+{"task_id": "python/47", "evaluation": "            dis[x][", "token_count": 512}
+{"task_id": "python/48", "evaluation": "    assert ns.adjacent", "token_count": 334}
+{"task_id": "python/49", "evaluation": "            for j, v in enumerate(row", "token_count": 512}
+{"task_id": "python/50", "evaluation": "            q", "token_count": 301}
+{"task_id": "python/51", "evaluation": "  \"evaluation\": \"Correct\"", "token_count": 299}
+{"task_id": "python/52", "evaluation": "            res[i] = t.query(n)[0]", "token_count": 512}
+{"task_id": "python/53", "evaluation": "}  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation result.  # Replace with actual evaluation", "token_count": 512}
+{"task_id": "python/54", "evaluation": "        return", "token_count": 512}
+{"task_id": "python/55", "evaluation": "    content_code = compile(content_ast, filename=\"<ast>\", mode=\"exec", "token_count": 367}
+{"task_id": "python/56", "evaluation": "            abs(circles[i][1] - yj) <= circles[i", "token_count": 512}
+{"task_id": "python/57", "evaluation": "Please write a Python function to evaluate the code snippet based on the provided groundtruth and content. The function should return a JSON object with the task ID and the", "token_count": 512}
+{"task_id": "python/58", "evaluation": "The evaluation is correct because", "token_count": 285}
+{"task_id": "python/59", "evaluation": "{", "token_count": 512}
+{"task_id": "python/60", "evaluation": "        path = [[] for", "token_count": 293}
+{"task_id": "python/61", "evaluation": "            g[v].", "token_count": 512}
+{"task_id": "python/62", "evaluation": "        b = sorted(set(x - i", "token_count": 512}
+{"task_id": "python/63", "evaluation": "I'll be happy to assist you further", "token_count": 268}
+{"task_id": "python/64", "evaluation": "        if zero1 == 0 and zero2 == 0: return sum1 if sum1 ==", "token_count": 450}
+{"task_id": "python/65", "evaluation": "            dp1, dp2, dp3 = min(dp1, dp2", "token_count": 229}
+{"task_id": "python/66", "evaluation": "The code is a solution to the problem \"Maximum Points You Can Obtain from Cards\". It uses a depth-first search (DFS) approach with memoization to find the maximum points that can be obtained from the given edges and coins. The DFS function explores the graph and keeps track of the maximum points obtained from each node. The code is correct and the output matches the expected result. Therefore, the evaluation is \"Correct\". . . . . . . . . . . . . .", "token_count": 512}
+{"task_id": "python/67", "evaluation": "            sum[o] += add * (r - l + 1)", "token_count": 512}
+{"task_id": "python/68", "evaluation": "        self.solution", "token_count": 512}
+{"task_id": "python/69", "evaluation": "    for", "token_count": 198}
+{"task_id": "python/70", "evaluation": "                else:", "token_count": 257}
+{"task_id": "python/71", "evaluation": "The provided code snippets are based on the LeetCode problem 'Maximize the Confusion of an Exam'. The groundtruth code snippet handles the edge case where the input list is", "token_count": 389}
+{"task_id": "python/72", "evaluation": "Note: This response is based on the provided test case and might not cover all possible inputs. The actual evaluation result may vary depending on the specific inputs and implementation details. .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .", "token_count": 415}
+{"task_id": "python/73", "evaluation": "Here is the Python code for the problem. The function minimumCost calculates the minimum cost to transform a source string into a target string with a given set of original and changed characters and their corresponding costs. The code uses dynamic programming to build a 2D table dp, where dp[i][j] represents the minimum cost to transform the first i characters of the", "token_count": 512}
+{"task_id": "python/74", "evaluation": "        return ans", "token_count": 458}
+{"task_id": "python/75", "evaluation": "Finally, the code does not provide any error handling for the case where the input lists `original` and `", "token_count": 458}
+{"task_id": "cpp/0", "evaluation": "            res = (res + dfs((1 << n) - 1, i", "token_count": 362}
+{"task_id": "cpp/1", "evaluation": "class Solution {public:int paintWalls(vector<int>& cost, vector<int>& time) {int n = cost.size();vector<int> f(n * 2 + 1, INT_MAX / 2);f[n] = 0;for (int i = 0; i < n; ++i) {vector<int> g(n * 2 + 1, INT_MAX / 2);for (int j = 0; j <= n * 2; ++j) {// \u4ed8\u8d39g[min(j + time[i], n * 2)] = min(g[min(j + time[i], n * 2)], f[j] + cost[i]);// \u514d\u8d39if (j > 0) {g[j - 1] = min(g[j - 1], f[j]);}}f = move(g);}return", "token_count": 512}
+{"task_id": "cpp/2", "evaluation": "The code is also provided with a", "token_count": 512}
+{"task_id": "cpp/3", "evaluation": "  \"", "token_count": 242}
+{"task_id": "cpp/4", "evaluation": "    Solution", "token_count": 512}
+{"task_id": "cpp/5", "evaluation": "}  # The provided groundtruth code has a logical error in the line where it checks for same characters. The groundtruth code will enter an infinite loop if it", "token_count": 330}
+{"task_id": "cpp/6", "evaluation": "If you want to run this code, you can save it in a file (e.g., `code.cpp`) and compile it using the following command: `g++ code.cpp -o code", "token_count": 402}
+{"task_id": "cpp/7", "evaluation": "Note: The final answer is a JSON object with the task_id and evaluation fields, where evaluation is either \"Correct\" or \"Incorrect\". The evaluation field will be set to \"Correct\" if the content code snippet is equivalent to the groundtruth code snippet, and \"Incorrect\" otherwise. In this case, the evaluation field is set to \"Correct\" because the content code snippet is equivalent to the groundtruth code snippet.", "token_count": 283}
+{"task_id": "cpp/8", "evaluation": "  \"evaluation\": \"Incorrect\"", "token_count": 512}
+{"task_id": "cpp/9", "evaluation": "content = '{\"class Solution\\\":{\\\"static constexpr int N = 23;static constexpr int M = 401;static constexpr int MOD = 1e9 + 7;int d[N][M];string num;int min_sum;int max_sum;int dfs(int i, int j, bool limit) {if (j > max_sum) {return 0;}if (i == -", "token_count": 512}
+{"task_id": "cpp/10", "evaluation": "}", "token_count": 512}
+{"task_id": "cpp/11", "evaluation": "The provided code snippet is a solution to the minimum cost path problem in a graph, where the graph is represented as an adjacency list using a vector of vectors. The solution uses a breadth-first search (BFS) algorithm to find the shortest path between two points. The code correctly implements the BFS algorithm and handles edge cases such as when the start point is the target point. Therefore, the evaluation result is \"", "token_count": 512}
+{"task_id": "cpp/12", "evaluation": "    cout << sol.smallestBeautifulString(\"abd\",", "token_count": 452}
+{"task_id": "cpp/13", "evaluation": "The final answer is: Incorrect.", "token_count": 465}
+{"task_id": "cpp/14", "evaluation": "}  # Correct Answer.  However, the problem statement requires us to evaluate the groundtruth code snippet, which is \"Incorrect\". The correct output should be", "token_count": 512}
+{"task_id": "cpp/15", "evaluation": "  int sum(int x) { int res = 0; while (x > 0) { res += tree[x]; x &= x - 1; } return res; }", "token_count": 496}
+{"task_id": "cpp/16", "evaluation": "}", "token_count": 512}
+{"task_id": "cpp/17", "evaluation": "The code in the content is a solution to a problem where it calculates the minimum number of operations required to make all elements in a vector equal to 1.", "token_count": 298}
+{"task_id": "cpp/18", "evaluation": "\\end{code}", "token_count": 391}
+{"task_id": "cpp/19", "evaluation": "    string input5 = \"", "token_count": 289}
+{"task_id": "cpp/20", "evaluation": "    cout << solution.minimumTotalPrice(n, edges, price, trips) << endl;", "token_count": 449}
+{"task_id": "cpp/21", "evaluation": "class Solution {public:vector<long long> findPrefixScore(vector<int>& nums) {vector<long long> ans;int tmp = nums[0];ans.push_back(nums[0] * 2);for (int i = 1; i < nums.size(); ++i", "token_count": 512}
+{"task_id": "cpp/22", "evaluation": "The", "token_count": 512}
+{"task_id": "cpp/23", "evaluation": "Please let me know", "token_count": 512}
+{"task_id": "cpp/24", "evaluation": "}  # Correct means the two pieces of code are equivalent. Incorrect means they are not.  # The code in content is functional and gives out the right output.  # The code in groundtruth is also functional and gives out the right output.  # The two pieces of code are equivalent.  # Therefore, the evaluation is Correct.  # The task_id is cpp/24.  # The response is in the required JSON format.  # The response has the correct fields: task_id and evaluation.  # The response has the correct values for these fields.  # The response is in the required structured format.  # The response does not contain any additional information.  # The response does not contain any justifications or explanations.  # The response does not contain any additional data.  # The response is a JSON object.  # The response is a string.  # The response is a valid JSON string.  # The response is a valid JSON object.  # The response has a valid JSON structure.  # The response has a valid JSON syntax.  # The response is a valid JSON response.  # The response meets all the requirements.  # The response is correct.  # The response is complete.  # The response is well-formed.  # The response is a valid JSON object.  # The response has a valid JSON structure.  # The response has a valid JSON syntax.  # The response is a valid JSON response.  # The response meets all the requirements.  # The response is correct.  # The response is complete.  # The response is well-formed.  # The response is a valid JSON object.  # The response has a valid JSON structure.  # The response has a valid JSON syntax.  # The response is a valid JSON response.  # The response meets all the requirements.  # The response is correct.  # The response is complete.  # The response is well-formed.  # The response is a valid JSON object.  # The response has a valid JSON structure.  # The response has a valid JSON syntax.  # The response is a valid JSON response.  # The response meets all the requirements.  # The response is correct.  # The response is complete.  # The response is well-formed.", "token_count": 512}
+{"task_id": "cpp/25", "evaluation": "  \"task_id\": \"cpp/25", "token_count": 512}
+{"task_id": "cpp/26", "evaluation": "class Solution {public:int minimumVisitedCells(vector<vector<int>>& grid) {int m = grid.size(), n = grid[0].size();vector<vector<int>> dist(m, vector<int>(n, -1));dist[0][0] = 1;vector<priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>>> row(m), col(n);for (int i = 0; i < m; ++i) {for (int j = 0; j < n; ++j) {if (dist[i][j]!= -1) continue;if (i > 0 && dist[i - 1][j]!= -1) {update(dist[i][j], dist[i - 1][j] + 1);}if (j > 0 && dist[i][j - 1]!= -1) {update(dist[i][j], dist[i][j - 1] + 1);}if (i > 0 && j > 0 && dist[i - 1][j - 1]!= -1) {update(dist[i][j], dist[i - 1][j - 1] + 1);}if (i > 0 && j > 0 && dist[i - 1][j - 1] == -1) {row[i].emplace(dist[i - 1][j - 1] + 1, j - 1);col[j - 1].emplace(dist[i - 1][j - 1] + 1, i - 1);}if (i > 0 && j > 0) {update(dist[i][j], dist[i][j - 1] + 1);}if (i > 0 && j > 0) {update(dist[i][j], dist[i - 1][j] + 1);}if (i > 0 && j > 0) {update(dist[i][j], dist[i - 1][j - 1] + 1);}if (i > 0 && j > 0) {row[i].emplace(dist[i - 1][j - 1] + 1, j - 1);col[j - 1].emplace(dist[i - 1][j - 1] + 1, i - 1);}if (i > 0) {update(dist[i][j], dist[i - 1][j] + 1);}if (j > 0) {update(dist[i][j], dist[i][j - 1] + 1);}if (i > 0 && j > 0) {update(dist[i][j], dist[i - 1][j - 1] + 1);}if (i > 0) {row[i].emplace(dist[i - 1][j], j);col[j].emplace(dist[i - 1][j], i);}if (j > 0) {row[i].emplace(dist[i", "token_count": 512}
+{"task_id": "cpp/27", "evaluation": "The evaluation is \"Correct\" because the code correctly implements the algorithm to reconstruct the matrix from the sorted array of integers.", "token_count": 219}
+{"task_id": "cpp/28", "evaluation": "  \"evaluation", "token_count": 365}
+{"task_id": "cpp/29", "evaluation": "  \"task_id\": \"cpp/29\",", "token_count": 512}

@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "nums = [2, 2, 1, 1, 3, 4, 5, 8, 9, 10, 20, 40, 80", "token_count": 1280}
+{"task_id": "python/1", "evaluation": "            return money", "token_count": 1280}
+{"task_id": "python/2", "evaluation": "The function initializes a variable `sumi` to 1 and two empty sets `row` and `col`. It then iterates over the `queries` list in reverse order. For each query, if the type is", "token_count": 1280}
+{"task_id": "python/3", "evaluation": "        print('{\"task_id\": \"python/3\", \"evaluation\": \"Correct", "token_count": 1280}
+{"task_id": "python/4", "evaluation": "}", "token_count": 790}
+{"task_id": "python/5", "evaluation": "}", "token_count": 1152}
+{"task_id": "python/6", "evaluation": "    if 1 in nums:return False", "token_count": 924}
+{"task_id": "python/7", "evaluation": "}", "token_count": 1111}
+{"task_id": "python/8", "evaluation": "        if s[i]!= s[i", "token_count": 1280}
+{"task_id": "python/9", "evaluation": "                    [[1,2,3,4], 0", "token_count": 1280}
+{"task_id": "python/10", "evaluation": "```", "token_count": 1229}
+{"task_id": "python/11", "evaluation": "}", "token_count": 830}
+{"task_id": "python/12", "evaluation": "        for i in range(1,", "token_count": 1280}
+{"task_id": "python/13", "evaluation": "                if", "token_count": 1280}
+{"task_id": "python/14", "evaluation": "}", "token_count": 1244}
+{"task_id": "python/15", "evaluation": "            total += curSum", "token_count": 1280}
+{"task_id": "python/16", "evaluation": "\u56e2\u6307\u7684\u662f\u4e00\u7ec4\u81f3\u5c11\u7531\u4e00\u4e2a\u4eba\u7ec4\u6210\u7684\u4eba", "token_count": 1280}
+{"task_id": "python/17", "evaluation": "}", "token_count": 1184}
+{"task_id": "python/18", "evaluation": "        return dfs(0, False, False, -1, False)", "token_count": 1089}
+{"task_id": "python/19", "evaluation": "The resulting number contains all the digits from 1 to 9 exactly once and does not contain any 0", "token_count": 1280}

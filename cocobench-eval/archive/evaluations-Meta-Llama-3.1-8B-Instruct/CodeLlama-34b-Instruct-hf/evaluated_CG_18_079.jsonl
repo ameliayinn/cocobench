@@ -1,0 +1,131 @@
+{"task_id": "java/0", "evaluation": "import java.util.ArrayList;import java.util.Arrays;public class Solution {    public int findChampion(int n, int[][] edges) {        int[] degree = new int[n];        for (int[] e : edges) {            degree[e[1]]++;        }        int champion = -1;        for (int i = 0; i < n; i++) {            if (degree[i] == 0) {                if (champion == -1) {                    champion = i;                } else {                    return -1;                }            }        }        return champion;    }    public static void main(String[] args) {        Solution s = new Solution();        int n = 5;        int[][] edges = new int[][] {{1, 2}, {2, 3}, {3,", "token_count": 288}
+{"task_id": "java/1", "evaluation": "The final answer is: $\\boxed{Correct}$|  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{Correct}$ |  $\\boxed{Incorrect}$ |  $\\boxed{", "token_count": 340}
+{"task_id": "java/2", "evaluation": "The provided code snippets", "token_count": 453}
+{"task_id": "java/3", "evaluation": "}", "token_count": 400}
+{"task_id": "java/4", "evaluation": "The", "token_count": 489}
+{"task_id": "java/5", "evaluation": "This code is a Java implementation of the given specification, which calculates the number of substrings in a given string that do not contain the", "token_count": 512}
+{"task_id": "java/6", "evaluation": "    private boolean inCircle(long ox, long oy, long r, long x, long", "token_count": 512}
+{"task_id": "java/7", "evaluation": "The final answer is: Incorrect.  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\": \"Incorrect\"}  {\"task_id\": \"java/7\", \"evaluation\":", "token_count": 182}
+{"task_id": "java/8", "evaluation": "  \"evaluation\":", "token_count": 512}
+{"task_id": "java/9", "evaluation": "                    w[", "token_count": 512}
+{"task_id": "java/10", "evaluation": "}  # Correct if the code is correct, Incorrect otherwise.  # Do not remove this line.  # Do not modify this line.  # Do not add any new lines.  # Do not add any comments.  # Do not change the output format.  # Do not change the output values.  # Do not change the output data types.  # Do not add any new fields.  # Do not remove any fields.  # Do not modify any fields.  # Do not change the field names.  # Do not change the field values.  # Do not change the field data types.  # Do not add any new code.  # Do not remove any code.  # Do not modify any code.  # Do not change the indentation.  # Do not change the code formatting.  # Do not change the code style.  # Do not add any new libraries.  # Do not remove any libraries.  # Do not modify any libraries.  # Do not change the library versions.  # Do not add any new imports.  # Do not remove any imports.  # Do not modify any imports.  # Do not change the import order.  # Do not change the import formatting.  # Do not change the import style.  # Do not add any new variables.  # Do not remove any variables.  # Do not modify any variables.  # Do not change the variable names.  # Do not change the variable values.  # Do not change the variable data types.  # Do not add any new methods.  # Do not remove any methods.  # Do not modify any methods.  # Do not change the method names.  # Do not change the method parameters.  # Do not change the method return types.  # Do not change the method bodies.  # Do not change the method indentation.  # Do not change the method formatting.  # Do not change the method style.  # Do not add any new classes.  # Do not remove any classes.  # Do not modify any classes.  # Do not change the class names.  # Do not change the class fields.  # Do not change the class methods.  # Do not change the class indentation.  # Do not change the class formatting.  # Do not change the class style.  # Do not add any new interfaces.  # Do not remove any interfaces.  # Do not modify any interfaces.  # Do not change the interface names.  # Do not", "token_count": 512}
+{"task_id": "java/11", "evaluation": "```", "token_count": 269}
+{"task_id": "java/12", "evaluation": "```python", "token_count": 290}
+{"task_id": "java/13", "evaluation": "        int[] nums = {1, 2, 3", "token_count": 512}
+{"task_id": "java/14", "evaluation": "The evaluation of the two code snippets will be based on the rules provided. The task ID for this evaluation is \"java/14", "token_count": 512}
+{"task_id": "java/15", "evaluation": "Note: The code in the content does not follow the rules for", "token_count": 476}
+{"task_id": "java/16", "evaluation": "Let me know if you need further clarification or have any other questions.", "token_count": 242}
+{"task_id": "java/17", "evaluation": "  \"evaluation\":", "token_count": 395}
+{"task_id": "java/18", "evaluation": "}  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  # Correct  #", "token_count": 512}
+{"task_id": "java/19", "evaluation": "                cur.next = cur.next.next", "token_count": 241}
+{"task_id": "java/20", "evaluation": "The final answer is: { \"task_id\": \"java", "token_count": 512}
+{"task_id": "java/21", "evaluation": "```", "token_count": 316}
+{"task_id": "java/22", "evaluation": "        System.out.println(\"Maximum number of operations: \" + solution.maxOperations(S", "token_count": 221}
+{"task_id": "java/23", "evaluation": "  \"task", "token_count": 512}
+{"task_id": "java/24", "evaluation": "Let me know if you need further clarification or modifications!", "token_count": 304}
+{"task_id": "python/0", "evaluation": "Note: The additional method \"diagonalSum\" is not used in the groundtruth code and can be safely removed from the content code to make it equivalent to the groundtruth code.", "token_count": 502}
+{"task_id": "python/1", "evaluation": "[Your Name]", "token_count": 499}
+{"task_id": "python/2", "evaluation": "        self.s = np.zeros", "token_count": 499}
+{"task_id": "python/3", "evaluation": "            for step in count(1):", "token_count": 301}
+{"task_id": "python/4", "evaluation": "        queries = [[0,3", "token_count": 512}
+{"task_id": "python/5", "evaluation": "```", "token_count": 301}
+{"task_id": "python/6", "evaluation": "The code uses a disjoint set data structure to keep track of the connected components. It defines a function find(x) to find the root of the set that x belongs to. The main function shortestDistanceAfterQueries(n", "token_count": 512}
+{"task_id": "python/7", "evaluation": "        cnt = n -", "token_count": 479}
+{"task_id": "python/8", "evaluation": "        def find", "token_count": 299}
+{"task_id": "python/9", "evaluation": "        # Check if", "token_count": 512}
+{"task_id": "python/10", "evaluation": "            t.update((nxt - pre - 1)", "token_count": 512}
+{"task_id": "python/11", "evaluation": "    content_result = solution.numberOfAlternatingGroups(colors,", "token_count": 512}
+{"task_id": "python/12", "evaluation": "        single=0", "token_count": 243}
+{"task_id": "python/13", "evaluation": "    return sum(1 for i in range(l, r + 1) if sieve[i", "token_count": 273}
+{"task_id": "python/14", "evaluation": "        exec", "token_count": 466}
+{"task_id": "python/15", "evaluation": "content = Solution().numberOfSub", "token_count": 367}
+{"task_id": "python/16", "evaluation": "Based on the evaluation of the code, the task evaluation", "token_count": 512}
+{"task_id": "python/17", "evaluation": "  \"task_id\": \"python/17", "token_count": 512}
+{"task_id": "python/18", "evaluation": "    def canReachCorner(self, X: int, Y: int, circles:", "token_count": 512}
+{"task_id": "python/19", "evaluation": "            x1,", "token_count": 512}
+{"task_id": "python/20", "evaluation": "Note: The code in the content and groundtruth are", "token_count": 512}
+{"task_id": "python/21", "evaluation": "This solution first tries to evaluate the content using the exec function. If there is any exception during the execution, it immediately returns \"Incorrect\". If the content executes successfully, it then tries to execute", "token_count": 212}
+{"task_id": "python/22", "evaluation": "    solution = globals", "token_count": 285}
+{"task_id": "python/23", "evaluation": "{", "token_count": 285}
+{"task_id": "python/24", "evaluation": "The provided code snippets are identical in", "token_count": 476}
+{"task_id": "python/25", "evaluation": "{", "token_count": 512}
+{"task_id": "python/26", "evaluation": "The provided content and groundtruth code snippets are identical, therefore the evaluation is \"Correct\".  The content and groundtruth code snippets are both functional and give out the right output.  The code snippets use a Binary Indexed Tree (BIT) to efficiently calculate the maximum balanced subsequence sum.  The BIT is used to store the", "token_count": 337}
+{"task_id": "python/27", "evaluation": "            i += i & -i", "token_count": 425}
+{"task_id": "python/28", "evaluation": "    return max(nums).bit_length()", "token_count": 190}
+{"task_id": "python/29", "evaluation": "if __", "token_count": 307}
+{"task_id": "python/30", "evaluation": "}  |  {", "token_count": 506}
+{"task_id": "python/31", "evaluation": "When you run this code, it will print the evaluation result in the required", "token_count": 285}
+{"task_id": "python/32", "evaluation": "}  # Correct", "token_count": 293}
+{"task_id": "python/33", "evaluation": "Note that the `Solution` class and the `maximumPoints` method are defined in the `evaluate_code` function to avoid any potential issues with importing the `Solution` class from an external module. Also, the `cache` decorator is", "token_count": 462}
+{"task_id": "python/34", "evaluation": "{ \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"Correct\" }  |  { \"task_id\": \"python/34\", \"evaluation\": \"", "token_count": 512}
+{"task_id": "python/35", "evaluation": "            m = (l + r", "token_count": 512}
+{"task_id": "python/36", "evaluation": "- \u7136\u540e\u5bf9\u6bcf\u4e2a\u5b50", "token_count": 512}
+{"task_id": "python/37", "evaluation": "The main function iterates over the array and uses the `query_and_add1` function to update the sum of counts", "token_count": 512}
+{"task_id": "python/38", "evaluation": "  \"evaluation", "token_count": 226}
+{"task_id": "python/39", "evaluation": "        return f[-1] if f[-1] >", "token_count": 373}
+{"task_id": "python/40", "evaluation": "The function f takes two parameters: a, which is a list of integers, and mx", "token_count": 387}
+{"task_id": "python/41", "evaluation": "Please", "token_count": 397}
+{"task_id": "python/42", "evaluation": "    def minimumCost(self, source: str, target: str, original: List[str], changed: List[str], cost:", "token_count": 512}
+{"task_id": "python/43", "evaluation": "    print(solution.minimumCost(\"abc\", \"bcd\", [\"abc\", \"bcd\", \"ace\"],", "token_count": 512}
+{"task_id": "python/44", "evaluation": "  \"task_id\": \"python", "token_count": 512}
+{"task_id": "python/45", "evaluation": "2. The content code snippet uses a dictionary to store the distances between strings, while the", "token_count": 512}
+{"task_id": "python/46", "evaluation": "            res", "token_count": 445}
+{"task_id": "python/47", "evaluation": "                        continue", "token_count": 445}
+{"task_id": "python/48", "evaluation": "        self.assertEqual", "token_count": 499}
+{"task_id": "python/49", "evaluation": "DIRS = ((-1, 0), (1, 0), (0, -1), (0, 1), (1, 1), (-1, 1), (-1, -1", "token_count": 506}
+{"task_id": "python/50", "evaluation": "        return ans", "token_count": 492}
+{"task_id": "python/51", "evaluation": "print(solution.short", "token_count": 512}
+{"task_id": "python/52", "evaluation": "}  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.  # Correct because both code snippets are equivalent.", "token_count": 512}
+{"task_id": "python/53", "evaluation": "        self.update(index + 1", "token_count": 512}
+{"task_id": "python/54", "evaluation": "# If the sum of single-digit numbers is greater than the sum of double-digit numbers, Alice wins. Otherwise, she loses.", "token_count": 512}
+{"task_id": "python/55", "evaluation": "```python", "token_count": 512}
+{"task_id": "python/56", "evaluation": "Note: This code is identical to the content", "token_count": 512}
+{"task_id": "python/57", "evaluation": "```", "token_count": 512}
+{"task_id": "python/58", "evaluation": "        count += dfs(graph, node, visited", "token_count": 351}
+{"task_id": "python/59", "evaluation": "                    count += self.dfs(graph, next_node, visited)", "token_count": 441}
+{"task_id": "python/60", "evaluation": "        def dfs(u,", "token_count": 441}
+{"task_id": "python/61", "evaluation": "print(solution(content=\"def solution(content, groundtruth):\\n    try:\\n        exec(content, {'__builtins__': None})\\n        return {'task_id': 'python/61', 'evaluation': 'Correct'}\\n    except Exception as e:\\n        return {'task_id': 'python/61', 'evaluation': 'Incorrect'}\\n\\nsolution(content=\\\"class Solution:\\\\n    def maximumScoreAfterOperations(self, edges: List[List[int]], nums: List[int]) -> int:\\\\n        n = len(nums)\\\\n        path = [[] for _ in range(n)]\\\\n        for u, v in edges:\\\\n            path[u].append(v)\\\\", "token_count": 310}
+{"task_id": "python/62", "evaluation": "Note: This code assumes that the content and ground truth are in the same directory as the script.", "token_count": 512}
+{"task_id": "python/63", "evaluation": "The code in the content is incorrect. The function findKOr uses the function k_or", "token_count": 348}
+{"task_id": "python/64", "evaluation": "    if zero1 == 0 and zero2", "token_count": 464}
+{"task_id": "python/65", "evaluation": "This code will execute the groundtruth code snippet and compare its output with the expected output. If the output matches the expected output, it will return \"Correct\", otherwise, it will return \"Incorrect\". If any exception occurs during execution, it will also return \"Incorrect\". The code uses the exec() function to execute the groundtruth code snippet, and the globals() function to get the Solution class from the global namespace. The output is then returned in a JSON format.  python/65 {\"task_id\": \"python/65\", \"evaluation\": \"Incorrect\"}  python/65 {\"task_id\": \"python/65\", \"evaluation\": \"Incorrect\"}  python/65 {\"task_id\": \"python/65\", \"evaluation\": \"Incorrect\"}", "token_count": 289}
+{"task_id": "python/66", "evaluation": "This code defines a function `evaluate_code` that takes two code snippets, `content` and `groundtruth`, as input. It first attempts to execute both code snippets using the `exec` function. If any exception occurs during execution, it returns an \"Incorrect\" evaluation. Then, it defines a `Solution` class and calls its `maximumPoints` method with some test data. If this call raises an exception, it also returns an \"Incorrect\" evaluation. Otherwise, it returns", "token_count": 455}
+{"task_id": "python/67", "evaluation": "    nums = [1, 2, 3, 4, 5]", "token_count": 512}
+{"task_id": "python/68", "evaluation": "            add(1", "token_count": 512}
+{"task_id": "python/69", "evaluation": "Solution().minCharacters(\"abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc\")", "token_count": 181}
+{"task_id": "python/70", "evaluation": "    try:", "token_count": 512}
+{"task_id": "python/71", "evaluation": "        return ans ** 2 %", "token_count": 381}
+{"task_id": "python/72", "evaluation": "        a", "token_count": 450}
+{"task_id": "python/73", "evaluation": "The function uses dynamic programming to fill a 2D table dp, where dp[i][j] represents the minimum cost of transforming the first i characters of the source string into the first j characters of the target string", "token_count": 512}
+{"task_id": "python/74", "evaluation": "}", "token_count": 475}
+{"task_id": "python/75", "evaluation": "            for k in len_to_strs[len(source", "token_count": 512}
+{"task_id": "cpp/0", "evaluation": "Note: The code snippets are for a problem involving permutations of a given array, and the provided solution uses a dynamic programming approach with memoization to optimize the process. The function `specialPerm` calculates the number of special permutations of the given array. The evaluation focuses on whether the code is functionally correct and produces the correct output for the given problem.", "token_count": 512}
+{"task_id": "cpp/1", "evaluation": "The code then iterates over each wall from 1 to n. For each wall, it iterates over each possible time j from i * time[i - 1] to n * 2. It updates f[j] to be the minimum of the current f[j] and the minimum", "token_count": 512}
+{"task_id": "cpp/2", "evaluation": "---|", "token_count": 512}
+{"task_id": "cpp/3", "evaluation": "Here is", "token_count": 453}
+{"task_id": "cpp/4", "evaluation": "        sort(sortedQueries.begin(), sortedQueries.end(), [](tuple<int, int, int> &a, tuple<int, int, int> &b) {return get<1>(a) > get<1>(b);});", "token_count": 512}
+{"task_id": "cpp/5", "evaluation": "}", "token_count": 243}
+{"task_id": "cpp/6", "evaluation": "The provided code snippet in the content is not equivalent to the groundtruth. The main difference lies in the calculation of the result. In the content, it simply adds the differences between consecutive positions, while the groundtruth uses a more complex formula", "token_count": 500}
+{"task_id": "cpp/7", "evaluation": "}", "token_count": 457}
+{"task_id": "cpp/8", "evaluation": "class Solution {public:long long matrixSumQueries(int n, vector<vector<int>> &queries) {long long ans = 0;unordered_set<int> vis[2];for (int i = queries.size() - 1; i >= 0; i--) {auto &q = queries[i];int type = q", "token_count": 458}
+{"task_id": "cpp/9", "evaluation": "  static", "token_count": 512}
+{"task_id": "cpp/10", "evaluation": "  \"evaluation\":", "token_count": 299}
+{"task_id": "cpp/11", "evaluation": "            for (auto &[p,", "token_count": 512}
+{"task_id": "cpp/12", "evaluation": "        }", "token_count": 512}
+{"task_id": "cpp/13", "evaluation": "    vector<int> a = {1, 2", "token_count": 319}
+{"task_id": "cpp/14", "evaluation": "    ans =", "token_count": 512}
+{"task_id": "cpp/15", "evaluation": "This code defines a class `Solution` with a method `removeMaximum` that takes a vector of integers `nums` as input and returns an integer. The method uses a class `BIT` (Binary Indexed Tree) to keep track of the sum of elements in the range `[1, i]`. The `removeMaximum` method iterates over the input vector, and for each element, it checks if the element is greater", "token_count": 512}
+{"task_id": "cpp/16", "evaluation": "The final answer is: Correct.", "token_count": 389}
+{"task_id": "cpp/17", "evaluation": "class Solution {public:int min", "token_count": 298}
+{"task_id": "cpp/18", "evaluation": "}", "token_count": 255}
+{"task_id": "cpp/19", "evaluation": "# the code will fail and return an incorrect result.", "token_count": 335}
+{"task_id": "cpp/20", "evaluation": "    int minimumTotalPrice(int n, vector<vector<int", "token_count": 512}
+{"task_id": "cpp/21", "evaluation": "\t\tvector<long long> ans;", "token_count": 319}
+{"task_id": "cpp/22", "evaluation": "The code is the same as the ground truth. Therefore", "token_count": 309}
+{"task_id": "cpp/23", "evaluation": "- Respond in a structured JSON", "token_count": 388}
+{"task_id": "cpp/24", "evaluation": "    for (int num : output", "token_count": 512}
+{"task_id": "cpp/25", "evaluation": "```", "token_count": 253}
+{"task_id": "cpp/26", "evaluation": "```", "token_count": 447}
+{"task_id": "cpp/27", "evaluation": "  \"task_id\": \"cpp/27\",", "token_count": 364}
+{"task_id": "cpp/28", "evaluation": "The final answer is: {\"", "token_count": 342}
+{"task_id": "cpp/29", "evaluation": "The final answer is: $\\boxed{{\"task_id\": \"cpp/29\", \"", "token_count": 512}

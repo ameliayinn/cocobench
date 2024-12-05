@@ -1,0 +1,121 @@
+{"task_id": "cpp/0", "evaluation": "{'s': 'a'}", "token_count": 1236}
+{"task_id": "cpp/1", "evaluation": "            op2 = op2Score == prev and dp_memo(l, r - 2) + 1", "token_count": 1280}
+{"task_id": "cpp/2", "evaluation": "{'nums': [2, 1, 3,", "token_count": 1176}
+{"task_id": "cpp/3", "evaluation": "```json", "token_count": 660}
+{"task_id": "cpp/4", "evaluation": "{'", "token_count": 1198}
+{"task_id": "cpp/5", "evaluation": "}", "token_count": 1065}
+{"task_id": "cpp/6", "evaluation": "}", "token_count": 1062}
+{"task_id": "cpp/7", "evaluation": "[[3, 3], [3, 4], [4, 4], [4, 3], [", "token_count": 1280}
+{"task_id": "cpp/8", "evaluation": "4", "token_count": 1280}
+{"task_id": "cpp/9", "evaluation": "                l = mid + 1;", "token_count": 1280}
+{"task_id": "cpp/10", "evaluation": "}", "token_count": 1222}
+{"task_id": "cpp/11", "evaluation": "v.push_back({0,0,1", "token_count": 1280}
+{"task_id": "cpp/12", "evaluation": "Input: [1,2,", "token_count": 1280}
+{"task_id": "cpp/13", "evaluation": "42", "token_count": 1280}
+{"task_id": "cpp/14", "evaluation": "[\"abc\", \"cab\", \"", "token_count": 1280}
+{"task_id": "cpp/15", "evaluation": "-", "token_count": 1280}
+{"task_id": "cpp/16", "evaluation": "}", "token_count": 982}
+{"task_id": "cpp/17", "evaluation": "                dum.erase(0,", "token_count": 1280}
+{"task_id": "cpp/18", "evaluation": "{'nums': [1, 2, 3, 5], 'k': 10}", "token_count": 717}
+{"task_id": "cpp/19", "evaluation": "};", "token_count": 1101}
+{"task_id": "cpp/20", "evaluation": "print(obj.minimumDeletions(\"abcde", "token_count": 1280}
+{"task_id": "numpy/0", "evaluation": "  \"evaluation\": \"", "token_count": 754}
+{"task_id": "numpy/1", "evaluation": "# arr1 = np.array([[1,", "token_count": 1280}
+{"task_id": "numpy/2", "evaluation": "print(expand_transpose_squeeze([[1, 2], [3, 4], [5, 6], [7, 8]]))", "token_count": 1144}
+{"task_id": "numpy/4", "evaluation": "# print(concat_and_product(arr1, arr2))", "token_count": 1280}
+{"task_id": "numpy/5", "evaluation": "}", "token_count": 727}
+{"task_id": "numpy/6", "evaluation": "[1, 2, 3, 4, 5, 6]", "token_count": 1039}
+{"task_id": "numpy/7", "evaluation": "[[[1, 2], [3, 4]], [[5, 6], [7, 8]]]", "token_count": 1041}
+{"task_id": "numpy/8", "evaluation": "}", "token_count": 1122}
+{"task_id": "numpy/9", "evaluation": "}", "token_count": 1051}
+{"task_id": "numpy/10", "evaluation": "    print(answer)", "token_count": 1277}
+{"task_id": "numpy/11", "evaluation": "{ \"task_id\": \"numpy/11\", \"evaluation\": \"Correct\" }", "token_count": 1021}
+{"task_id": "numpy/12", "evaluation": "# matrix3 = [[9", "token_count": 1280}
+{"task_id": "numpy/13", "evaluation": "}", "token_count": 818}
+{"task_id": "numpy/14", "evaluation": "(1, 9, 2, 5, [4, 8, --, 7, --", "token_count": 1280}
+{"task_id": "numpy/15", "evaluation": "}", "token_count": 1234}
+{"task_id": "numpy/16", "evaluation": "You are given an integer array arr that has n unique elements, all in the inclusive range from to. You are also given two integers, min_val and max_val", "token_count": 1280}
+{"task_id": "numpy/17", "evaluation": "print(arr", "token_count": 1280}
+{"task_id": "numpy/18", "evaluation": "Give only the deduced input of the code", "token_count": 1280}
+{"task_id": "numpy/19", "evaluation": "The array [1, 2", "token_count": 1280}
+{"task_id": "numpy/20", "evaluation": "    conv = np.zeros((arr.shape[0", "token_count": 1280}
+{"task_id": "numpy/21", "evaluation": "[[2, 6, 7, 8, 9, 10], [3, 6, 7, 8, 9, 10], [3, 6, 7, 8, 9, 11], [3, 6, 7, 8, 10, 10], [3, 6, 7, 9, 9, 10], [3, 6, 7, 9, 10, 10], [3, 6, 8, 8, 9, 10], [3, 6, 8, 9, 9, 10], [3, 7, 7, 8, 9, 10], [3, 7, 8, 8, 9, 10], [4, 6, 7, 8, 9, 10], [4, 6, 7, 8, 10, 10], [4, 6, 8, 8, 9, 10], [4, 7, 7, 8, 9, 10], [5, 6,", "token_count": 1280}
+{"task_id": "numpy/22", "evaluation": "}", "token_count": 504}
+{"task_id": "numpy/23", "evaluation": "[[0, 6,", "token_count": 526}
+{"task_id": "numpy/24", "evaluation": "Give only the ded", "token_count": 1280}
+{"task_id": "numpy/25", "evaluation": "The", "token_count": 1280}
+{"task_id": "numpy/26", "evaluation": "[[1, 2, 3, 3, 4], 4]", "token_count": 1027}
+{"task_id": "numpy/27", "evaluation": "complex_array_operation(a, b, 2, 8)", "token_count": 723}
+{"task_id": "java/0", "evaluation": "{'nums': [3, 3], 'target': 6}", "token_count": 920}
+{"task_id": "java/1", "evaluation": "{'nums': [3, 3], 'target':", "token_count": 1066}
+{"task_id": "java/2", "evaluation": "        for (int i = 0; i < n;", "token_count": 1280}
+{"task_id": "java/3", "evaluation": "The input contains", "token_count": 1280}
+{"task_id": "java/4", "evaluation": "                while (i <", "token_count": 1280}
+{"task_id": "java/5", "evaluation": "// 5 5", "token_count": 1280}
+{"task_id": "java/6", "evaluation": "}", "token_count": 1239}
+{"task_id": "java/7", "evaluation": "5", "token_count": 1280}
+{"task_id": "java/8", "evaluation": "{1: 1, 2", "token_count": 1280}
+{"task_id": "java/9", "evaluation": "                if (v.get", "token_count": 1280}
+{"task_id": "java/10", "evaluation": "}", "token_count": 1248}
+{"task_id": "java/11", "evaluation": "Input 9: [1, 1, 1, 1, 1, 1, 1, 1, 1,", "token_count": 1280}
+{"task_id": "java/12", "evaluation": "}", "token_count": 568}
+{"task_id": "java/13", "evaluation": "The code snippet is correct for the given input.", "token_count": 853}
+{"task_id": "java/14", "evaluation": "                res = Math.max(prefix[i]-(map.get(nums[i]+k) == 0?0:prefix[map", "token_count": 1280}
+{"task_id": "java/15", "evaluation": "1 \u2264 arr[i] \u2264", "token_count": 1018}
+{"task_id": "java/16", "evaluation": "cosecutiveAnd", "token_count": 1280}
+{"task_id": "java/17", "evaluation": "Here the three sides are 1, 2 and 3, and the condition for isosceles", "token_count": 1280}
+{"task_id": "java/18", "evaluation": "}", "token_count": 1048}
+{"task_id": "java/19", "evaluation": "{'image': [[10, 20, 30], [15, 25, 35], [20, 30, 40], [", "token_count": 1246}
+{"task_id": "java/20", "evaluation": "{'word': 'abcbabcd', '", "token_count": 1196}
+{"task_id": "java/21", "evaluation": "}", "token_count": 1129}
+{"task_id": "java/22", "evaluation": "        for (int i =", "token_count": 1280}
+{"task_id": "java/23", "evaluation": "{'words': ['a', 'a', 'a', 'a', '", "token_count": 1252}
+{"task_id": "tensorflow/0", "evaluation": "}", "token_count": 317}
+{"task_id": "tensorflow/1", "evaluation": "# You should use the code snippet from above as it is. However, the input to the code", "token_count": 1280}
+{"task_id": "tensorflow/2", "evaluation": "Therefore, the result of the function is a tensor with the shape of (4, 1) and the elements of [0, 0", "token_count": 1280}
+{"task_id": "tensorflow/3", "evaluation": "    # TODO: Assign the value to the", "token_count": 1280}
+{"task_id": "tensorflow/4", "evaluation": "<div class=\"", "token_count": 1280}
+{"task_id": "tensorflow/5", "evaluation": "Content:", "token_count": 524}
+{"task_id": "tensorflow/6", "evaluation": "The output of the print function will be", "token_count": 1280}
+{"task_id": "tensorflow/7", "evaluation": "squared_tensor = [[1", "token_count": 586}
+{"task_id": "tensorflow/8", "evaluation": " [ 6,  7,  8]] (", "token_count": 1280}
+{"task_id": "tensorflow/9", "evaluation": "[[1,", "token_count": 1280}
+{"task_id": "tensorflow/10", "evaluation": "The output is:", "token_count": 1280}
+{"task_id": "tensorflow/11", "evaluation": "```", "token_count": 807}
+{"task_id": "pytorch/0", "evaluation": "## Step", "token_count": 1280}
+{"task_id": "pytorch/1", "evaluation": "def tensor_operations(tensor1", "token_count": 1280}
+{"task_id": "pytorch/2", "evaluation": "sum_tensor_above_threshold(input_tensor,", "token_count": 1264}
+{"task_id": "pytorch/3", "evaluation": "## Step 2: Compare the content", "token_count": 1280}
+{"task_id": "pytorch/4", "evaluation": "}", "token_count": 984}
+{"task_id": "pytorch/5", "evaluation": "                  [25,", "token_count": 1280}
+{"task_id": "pytorch/6", "evaluation": "}}$", "token_count": 1215}
+{"task_id": "pytorch/7", "evaluation": "}}$", "token_count": 1155}
+{"task_id": "pytorch/8", "evaluation": "}}$", "token_count": 1152}
+{"task_id": "pytorch/9", "evaluation": "}", "token_count": 1215}
+{"task_id": "pytorch/10", "evaluation": "}", "token_count": 1203}
+{"task_id": "pytorch/11", "evaluation": "nums = [[", "token_count": 1280}
+{"task_id": "pytorch/12", "evaluation": "    output = model(test_dl[0][", "token_count": 1130}
+{"task_id": "pytorch/13", "evaluation": "Give the input for", "token_count": 1210}
+{"task_id": "pytorch/14", "evaluation": "def compute_complex_grad", "token_count": 1280}
+{"task_id": "pytorch/15", "evaluation": "}", "token_count": 1115}
+{"task_id": "pytorch/16", "evaluation": "}", "token_count": 1143}
+{"task_id": "pytorch/17", "evaluation": "}", "token_count": 1126}
+{"task_id": "pytorch/18", "evaluation": "input_features 26, output", "token_count": 594}
+{"task_id": "pytorch/19", "evaluation": "```", "token_count": 1155}
+{"task_id": "pytorch/20", "evaluation": "}", "token_count": 972}
+{"task_id": "pytorch/21", "evaluation": "[[7.0, 8.0, 9.0], 1.0]", "token_count": 439}
+{"task_id": "pytorch/22", "evaluation": "}", "token_count": 273}
+{"task_id": "pytorch/23", "evaluation": "    learning_rate", "token_count": 1280}
+{"task_id": "sql/0", "evaluation": "}", "token_count": 807}
+{"task_id": "sql/1", "evaluation": "}", "token_count": 659}
+{"task_id": "sql/2", "evaluation": "SELECT COUNT(*) FROM ( SELECT REPLACE(LOWER(SUBSTRING(comment, 1, 10)),", "token_count": 1280}
+{"task_id": "sql/3", "evaluation": "}", "token_count": 452}
+{"task_id": "sql/4", "evaluation": "[{'employee_id': 1,'salary': 80000, 'hire_date': '2015-01-10'}, {'employee_id': 2,'salary': 120000, 'hire", "token_count": 1280}
+{"task_id": "sql/5", "evaluation": "Comment: Let us [continue this discussion in chat", "token_count": 1280}
+{"task_id": "sql/6", "evaluation": "[{'user_id': 1, 'name': 'John', 'last_login': '2023-03-10 10:22:34'}, {'user_id': 2, 'name': 'Alice', 'last_login': '2023-03-11 15:45:56'}, {'user_id':", "token_count": 788}
+{"task_id": "sql/7", "evaluation": "Note: Please use the current date as '2023-04-01' for the evaluation.", "token_count": 1127}
+{"task_id": "sql/8", "evaluation": "}", "token_count": 869}
+{"task_id": "sql/9", "evaluation": "[{'department_id': 201, 'average_salary': 70000.0,'min_salary': 60000,'max_salary': 80000}, {'department_id': 202, 'average_salary': 90000.0,'min_salary': 85000,'max_salary': 95000}, {'department_id': 203, 'average_salary': 72000.0,'min_salary': 72000,'max_salary': 72000}]", "token_count": 1031}
+{"task_id": "sql/10", "evaluation": "[('John Doe', '", "token_count": 1280}
+{"task_id": "sql/11", "evaluation": "```", "token_count": 408}
+{"task_id": "sql/12", "evaluation": "}", "token_count": 613}

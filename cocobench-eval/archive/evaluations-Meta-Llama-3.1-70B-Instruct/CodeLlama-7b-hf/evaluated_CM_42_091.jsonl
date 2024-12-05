@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "```", "token_count": 1005}
+{"task_id": "python/1", "evaluation": "        return", "token_count": 1280}
+{"task_id": "python/2", "evaluation": "            for i in range(row, n):", "token_count": 1280}
+{"task_id": "python/3", "evaluation": "#", "token_count": 1280}
+{"task_id": "python/4", "evaluation": "}}$", "token_count": 1182}
+{"task_id": "python/5", "evaluation": "```", "token_count": 781}
+{"task_id": "python/6", "evaluation": "```", "token_count": 491}
+{"task_id": "python/7", "evaluation": "```", "token_count": 1266}
+{"task_id": "python/8", "evaluation": "    content_time_complexity = content_end_time - content", "token_count": 1280}
+{"task_id": "python/9", "evaluation": "        return 0", "token_count": 1280}
+{"task_id": "python/10", "evaluation": "```", "token_count": 1239}
+{"task_id": "python/11", "evaluation": "        return countPerm(0, -1) % (10**9 + 7)", "token_count": 1138}
+{"task_id": "python/12", "evaluation": "}", "token_count": 588}
+{"task_id": "python/13", "evaluation": "                stack[-1] = (pos, h +", "token_count": 1280}
+{"task_id": "python/14", "evaluation": "            if (prime[x] == 0 && prime[n - x] ==", "token_count": 1280}
+{"task_id": "python/15", "evaluation": "Groundtruth should be used", "token_count": 1280}
+{"task_id": "python/16", "evaluation": "Note: The provided Solution.py is the same as the Groundtruth.", "token_count": 1038}
+{"task_id": "python/17", "evaluation": "}", "token_count": 1249}
+{"task_id": "python/18", "evaluation": "        return dfs(0, False, False, -1, False)", "token_count": 897}
+{"task_id": "python/19", "evaluation": "        return any(123 in (int(s1 + s2), int(s1 + s3), int", "token_count": 1280}

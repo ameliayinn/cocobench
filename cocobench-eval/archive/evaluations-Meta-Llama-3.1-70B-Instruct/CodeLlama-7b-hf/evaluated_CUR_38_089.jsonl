@@ -1,0 +1,121 @@
+{"task_id": "cpp/0", "evaluation": "        else:", "token_count": 1280}
+{"task_id": "cpp/1", "evaluation": "[3, 3, 1, 3, 4, 4, 7]", "token_count": 1280}
+{"task_id": "cpp/2", "evaluation": "        int maxElement = 0", "token_count": 992}
+{"task_id": "cpp/3", "evaluation": "    while(i<num1.size() &&", "token_count": 1280}
+{"task_id": "cpp/4", "evaluation": "{'words': ['pa', 'p", "token_count": 516}
+{"task_id": "cpp/5", "evaluation": "    vector<int>dx{0,1,1", "token_count": 1280}
+{"task_id": "cpp/6", "evaluation": "}$", "token_count": 1119}
+{"task_id": "cpp/7", "evaluation": "{'bottomLeft': [[1, 1], [2, 2], [10, 10], [10, 20]], 'topRight': [[9, 9], [10, 10], [20, 20], [30, 30]]}", "token_count": 1134}
+{"task_id": "cpp/8", "evaluation": "3 : we mark the index of 1,", "token_count": 1280}
+{"task_id": "cpp/9", "evaluation": "{'nums': [0, 0, 1, 2], 'changeIndices': [1, 2, 1, 2, 1,", "token_count": 558}
+{"task_id": "cpp/10", "evaluation": "                    s -= sum(grid,", "token_count": 1280}
+{"task_id": "cpp/11", "evaluation": "# S=[1,0,", "token_count": 1280}
+{"task_id": "cpp/12", "evaluation": "                result.push", "token_count": 1256}
+{"task_id": "cpp/13", "evaluation": "The", "token_count": 1280}
+{"task_id": "cpp/14", "evaluation": "cd", "token_count": 1280}
+{"task_id": "cpp/15", "evaluation": "                if (j % 2 ==", "token_count": 1280}
+{"task_id": "cpp/16", "evaluation": "[[1, 1], [2, 1], [4, 1], [2, 2], [1, 3], [1, 4], [2, 5], [3, 1], [5, 3], [6, 1], [7, 1], [5, 4], [4, 2], [3, 5], [5, 2], [2, 3], [1, 2], [2, 4], [6, 2], [3, 3], [6, 4], [5, 5], [4, 5], [7, 2], [6, 3], [5, 2], [6, 1], [4, 3], [7, 1], [1, 1], [3, 1], [2, 4], [2, 2], [2, 5], [3, 3], [1, 4], [4, 1], [3, 2], [4, 5], [6, 5], [4, 3], [3, 4], [6, 3], [3, 2], [6, 4], [2, 1], [1, 5], [2, 3], [7, 3], [4, 4], [3, 5], [6, 1], [1, 3], [6, 2], [5, 4], [1, 2], [5, 5], [7, 1], [2, 2], [3, 1], [1, 1], [7, 2], [3, 3], [4, 2], [6, 5], [5, 1], [2, 5], [6, 3], [4, 1], [1, 4], [5, 3], [7, 3], [2, 4], [1, 2], [6, 1], [3, 2], [3, 4], [5, 2], [1, 5], [2, 3], [6, 4], [7, 1], [6, 2], [3, 5], [5, 1], [", "token_count": 1280}
+{"task_id": "cpp/17", "evaluation": "        sort(s.begin", "token_count": 1280}
+{"task_id": "cpp/18", "evaluation": "// Explanation: The power of 1 is 1, the power of 2 is 2, the power of 3 is 4, the power of 4 is 8, the power of 5 is 16, the power of 6 is 32, the power of 7 is 64, the power of 8 is 128, the power of 9 is 256, the power of 10 is 512, the power of 11 is 1024, the power of 12 is 2048, the power of 13 is 4096, the power of 14 is 8192", "token_count": 1280}
+{"task_id": "cpp/19", "evaluation": "Explanation 0", "token_count": 1280}
+{"task_id": "cpp/20", "evaluation": "            } else if (count[i", "token_count": 1040}
+{"task_id": "numpy/0", "evaluation": "Groundtruth: np.array([1, 2, 3, 4, 5, 6])", "token_count": 362}
+{"task_id": "numpy/1", "evaluation": "}", "token_count": 1111}
+{"task_id": "numpy/2", "evaluation": " [5", "token_count": 1280}
+{"task_id": "numpy/4", "evaluation": "}", "token_count": 315}
+{"task_id": "numpy/5", "evaluation": "```", "token_count": 821}
+{"task_id": "numpy/6", "evaluation": "Inputs for the function are two arrays and their size. The function is responsible for reshaping the arrays to be 3 by 2 and then transpose the reshaped array, return the transposed array. The output is the reshaped", "token_count": 1280}
+{"task_id": "numpy/7", "evaluation": "[[[5, 6], [7, 8]], [[1, 2], [3, 4]]]", "token_count": 529}
+{"task_id": "numpy/8", "evaluation": "[[[9, 10], [11, 12]], [[13, 14], [15, 16]]]", "token_count": 297}
+{"task_id": "numpy/9", "evaluation": "arr3 = [1,", "token_count": 1280}
+{"task_id": "numpy/10", "evaluation": "}", "token_count": 1063}
+{"task_id": "numpy/11", "evaluation": "}", "token_count": 1051}
+{"task_id": "numpy/12", "evaluation": "print(sum", "token_count": 1280}
+{"task_id": "numpy/13", "evaluation": "# 1 12 3 9 15 7", "token_count": 1280}
+{"task_id": "numpy/14", "evaluation": "2 9 0 4 [2, 4, 7, 3, 9", "token_count": 1076}
+{"task_id": "numpy/15", "evaluation": "Since the input is not an even array, we can conclude that it will not be", "token_count": 1280}
+{"task_id": "numpy/16", "evaluation": "    n = int(first_multiple_input[0", "token_count": 1280}
+{"task_id": "numpy/17", "evaluation": "a = np.array([2, 4, 6, 8, 10, 12,", "token_count": 878}
+{"task_id": "numpy/18", "evaluation": "[[1,", "token_count": 1246}
+{"task_id": "numpy/19", "evaluation": "[2, 2]", "token_count": 1173}
+{"task_id": "numpy/20", "evaluation": "- Both the content and groundtruth discuss the topic of image", "token_count": 1280}
+{"task_id": "numpy/21", "evaluation": "```", "token_count": 733}
+{"task_id": "numpy/22", "evaluation": "{ \"task_id\": \"numpy/22\", \"evaluation\": \"Incorrect\" }", "token_count": 1063}
+{"task_id": "numpy/23", "evaluation": "```", "token_count": 820}
+{"task_id": "numpy/24", "evaluation": "```", "token_count": 438}
+{"task_id": "numpy/25", "evaluation": "}", "token_count": 1229}
+{"task_id": "numpy/26", "evaluation": "}", "token_count": 1198}
+{"task_id": "numpy/27", "evaluation": "}", "token_count": 1133}
+{"task_id": "java/0", "evaluation": "{'nums': [2,7,11,15], 'target': 9}", "token_count": 1280}
+{"task_id": "java/1", "evaluation": "        for(int i = 0; i < ans.length; i", "token_count": 1280}
+{"task_id": "java/2", "evaluation": "{'nums': [3, 3], '", "token_count": 1270}
+{"task_id": "java/3", "evaluation": "{'nums': [1], 'k': 1}", "token_count": 1050}
+{"task_id": "java/4", "evaluation": "The input array dimensions is [[1", "token_count": 1280}
+{"task_id": "java/5", "evaluation": "                    if ((a > e) and (a < c)) or ((a >", "token_count": 1280}
+{"task_id": "java/6", "evaluation": "}", "token_count": 914}
+{"task_id": "java/7", "evaluation": "The answer is 12. We can also deduce the answer by using [Compiler Explorer](https://godbolt.org", "token_count": 1280}
+{"task_id": "java/8", "evaluation": "{\"task_id\": \"java/8\", \"evaluation\": \"Correct\"}", "token_count": 1179}
+{"task_id": "java/9", "evaluation": "            while(ind > 0", "token_count": 1280}
+{"task_id": "java/10", "evaluation": "            if(min1 > nums[i", "token_count": 1280}
+{"task_id": "java/11", "evaluation": "It finds the number of bits set in that", "token_count": 1280}
+{"task_id": "java/12", "evaluation": "}", "token_count": 1227}
+{"task_id": "java/13", "evaluation": "        for (", "token_count": 1280}
+{"task_id": "java/14", "evaluation": "            if(sum>res)res = sum;", "token_count": 1236}
+{"task_id": "java/15", "evaluation": "}", "token_count": 1065}
+{"task_id": "java/16", "evaluation": "Test case 1: In test case 1 the input of the program is 5 and", "token_count": 1092}
+{"task_id": "java/17", "evaluation": "{'output': 'isos", "token_count": 1270}
+{"task_id": "java/18", "evaluation": "}", "token_count": 881}
+{"task_id": "java/19", "evaluation": "int", "token_count": 952}
+{"task_id": "java/20", "evaluation": "{'word': '", "token_count": 1270}
+{"task_id": "java/21", "evaluation": "A 2D array of integers  where  is the number of rows in  and", "token_count": 1280}
+{"task_id": "java/22", "evaluation": "{'nums': [1,", "token_count": 1006}
+{"task_id": "java/23", "evaluation": "{'", "token_count": 1158}
+{"task_id": "tensorflow/0", "evaluation": "a = compute_mean", "token_count": 1012}
+{"task_id": "tensorflow/1", "evaluation": "The input deduced from the code snippet is exactly as the output.", "token_count": 1280}
+{"task_id": "tensorflow/2", "evaluation": "    return reshaped_tensor.numpy()", "token_count": 1280}
+{"task_id": "tensorflow/3", "evaluation": "}", "token_count": 1180}
+{"task_id": "tensorflow/4", "evaluation": "[4, 5.437, 12.389, 35.095, 95.025", "token_count": 1280}
+{"task_id": "tensorflow/5", "evaluation": "Output:{\"task_id\": \"tensorflow/5\", \"evaluation\": \"Incorrect\"}", "token_count": 286}
+{"task_id": "tensorflow/6", "evaluation": "}", "token_count": 1193}
+{"task_id": "tensorflow/7", "evaluation": "'''", "token_count": 1252}
+{"task_id": "tensorflow/8", "evaluation": "inputs = layers.Input(shape=(28,", "token_count": 1280}
+{"task_id": "tensorflow/9", "evaluation": "Complete the task by creating a new list using list comprehension called my_list, which will contain all elements of old_list, multiplied by 3, in", "token_count": 1280}
+{"task_id": "tensorflow/10", "evaluation": "```", "token_count": 450}
+{"task_id": "tensorflow/11", "evaluation": "a =", "token_count": 1280}
+{"task_id": "pytorch/0", "evaluation": "[0, 1, 2, 3, 4, 5", "token_count": 1196}
+{"task_id": "pytorch/1", "evaluation": "                        [[5", "token_count": 1280}
+{"task_id": "pytorch/2", "evaluation": "}", "token_count": 1157}
+{"task_id": "pytorch/3", "evaluation": "}", "token_count": 508}
+{"task_id": "pytorch/4", "evaluation": "data =", "token_count": 546}
+{"task_id": "pytorch/5", "evaluation": "<span></span><span class=\"k\">#</span>  <span class=\"n\">shape</span><span class=\"o\">=</span><span class=\"p\">[</span><span class=\"n\">2</span><span class=\"p\">,</span> <span class=\"n\">2</span><span class=\"p\">]</span>", "token_count": 1280}
+{"task_id": "pytorch/6", "evaluation": "```", "token_count": 408}
+{"task_id": "pytorch/7", "evaluation": "    tensor = torch.tensor([[0, 1, 2, 3, 4], [0, 1, 2, 3,", "token_count": 1216}
+{"task_id": "pytorch/8", "evaluation": "print(stack_transpose_sum_diagonal(tensor1, tensor2))", "token_count": 629}
+{"task_id": "pytorch/9", "evaluation": "The list of numbers given in input are: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,", "token_count": 1280}
+{"task_id": "pytorch/10", "evaluation": "[-4, 4, 4,", "token_count": 1280}
+{"task_id": "pytorch/11", "evaluation": "```", "token_count": 411}
+{"task_id": "pytorch/12", "evaluation": "}", "token_count": 922}
+{"task_id": "pytorch/13", "evaluation": "```python", "token_count": 1194}
+{"task_id": "pytorch/14", "evaluation": "            return str(int(a[0])*int", "token_count": 1280}
+{"task_id": "pytorch/15", "evaluation": "```", "token_count": 864}
+{"task_id": "pytorch/16", "evaluation": "    return tensor.grad", "token_count": 1278}
+{"task_id": "pytorch/17", "evaluation": "    return x.grad.item()", "token_count": 1280}
+{"task_id": "pytorch/18", "evaluation": "The", "token_count": 1224}
+{"task_id": "pytorch/19", "evaluation": "Size([1, 10])", "token_count": 1137}
+{"task_id": "pytorch/20", "evaluation": "def evaluate_content(content, ground", "token_count": 584}
+{"task_id": "pytorch/21", "evaluation": "We can", "token_count": 514}
+{"task_id": "pytorch/22", "evaluation": "#include <iostream>", "token_count": 1258}
+{"task_id": "pytorch/23", "evaluation": "                            learning_rate=0.1))", "token_count": 621}
+{"task_id": "sql/0", "evaluation": "WHERE last_name = '", "token_count": 676}
+{"task_id": "sql/1", "evaluation": "}", "token_count": 1162}
+{"task_id": "sql/2", "evaluation": "answer =", "token_count": 1280}
+{"task_id": "sql/3", "evaluation": "    groundtruth = [{'transaction_id': 101, 'balance_change': -150}, {'transaction_id': 102, 'balance_change': 200}, {'transaction_id': 103,", "token_count": 1280}
+{"task_id": "sql/4", "evaluation": "| 199", "token_count": 1280}
+{"task_id": "sql/5", "evaluation": "}", "token_count": 1195}
+{"task_id": "sql/6", "evaluation": "SELECT * FROM users WHERE user_id = 1 AND name = 'John' AND last_login = '2023-03-10 10:22:34' AND", "token_count": 788}
+{"task_id": "sql/7", "evaluation": "}", "token_count": 1183}
+{"task_id": "sql/8", "evaluation": "2", "token_count": 1280}
+{"task_id": "sql/9", "evaluation": "[{'employee_id': 1, 'name': 'John', 'department_id': 201,'salary': 80000}, {'employee_id': 2, 'name': 'Alice', 'department_id': 202,'salary': 95000}, {'employee_id': 3, 'name': 'Bob', 'department_id': 201,'salary': 60000}, {'employee_id': 4, 'name': 'Charlie', 'department_id': 203,'salary': 72000}, {'employee_id': 5, 'name': 'Diana', 'department_id': 202,'salary': 100000}, {'employee_id': 6, 'name': 'Eva', 'department_id': 201,'salary': 85000}, {'employee_id': 7, 'name': 'Frank', 'department_id': 203,'salary': 65000}, {'employee_id': 8, 'name': 'George', 'department_id': 202,'salary': 105000}, {'employee_id': 9, 'name': 'Helen', 'department_id': 201,'salary': 70000}, {'employee_id': 10, 'name': 'Ivan', 'department_id': 203,'salary': 90000}]", "token_count": 1174}
+{"task_id": "sql/10", "evaluation": "}", "token_count": 1098}
+{"task_id": "sql/11", "evaluation": "SELECT name, CASE WHEN salary > 80000", "token_count": 1280}
+{"task_id": "sql/12", "evaluation": "}", "token_count": 1069}

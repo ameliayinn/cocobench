@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "Solution().maximumLength([1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4])", "token_count": 231}
+{"task_id": "python/1", "evaluation": "    if content == ground", "token_count": 462}
+{"task_id": "python/2", "evaluation": "The code snippet provided is", "token_count": 360}
+{"task_id": "python/3", "evaluation": "        values = [(v, r, c) for r, row in enumerate(mat) for c", "token_count": 512}
+{"task_id": "python/4", "evaluation": "    def countKeyChanges(self, s", "token_count": 309}
+{"task_id": "python/5", "evaluation": "def is_correct(content", "token_count": 311}
+{"task_id": "python/6", "evaluation": "        a,b = b,a % b", "token_count": 233}
+{"task_id": "python/7", "evaluation": "        if result", "token_count": 512}
+{"task_id": "python/8", "evaluation": "        res = 0", "token_count": 209}
+{"task_id": "python/9", "evaluation": "## Step 3: Determine the", "token_count": 275}
+{"task_id": "python/10", "evaluation": "}  # Replace", "token_count": 328}
+{"task_id": "python/11", "evaluation": "The task", "token_count": 317}
+{"task_id": "python/12", "evaluation": "                    c0 = c1", "token_count": 337}
+{"task_id": "python/13", "evaluation": "                    elif bot1[1] < arr", "token_count": 512}
+{"task_id": "python/14", "evaluation": "  \"task_id\": \"python/14\",", "token_count": 250}
+{"task_id": "python/15", "evaluation": "                            total += d[num", "token_count": 512}
+{"task_id": "python/16", "evaluation": "        while j > 1 and count[j] <", "token_count": 355}
+{"task_id": "python/17", "evaluation": "    def count", "token_count": 486}
+{"task_id": "python/18", "evaluation": "            end = int(high[i])", "token_count": 512}
+{"task_id": "python/19", "evaluation": "The code to evaluate is functionally correct and produces the same output as the groundtruth code for the provided test cases. Therefore, the evaluation should be \"Correct\". \\[5\\] \\[6\\] \\[7\\] \\[8\\] \\[9\\] \\[10\\] \\[11\\] \\[12\\] \\[13\\] \\[14\\] \\[15\\] \\[16\\] \\[17\\] \\[18\\] \\[19\\] \\[20\\] \\[21\\] \\[22\\] \\[23\\] \\[24\\] \\[25\\] \\[26\\] \\[27\\] \\[28\\] \\[29\\] \\[30\\] \\[31\\] \\[32\\] \\[33\\] \\[34\\] \\[35\\] \\[36\\] \\[37\\] \\[38\\] \\[39\\] \\[40\\] \\[41\\] \\[42\\] \\[43\\] \\[44\\] \\[45\\] \\[46\\] \\[47\\] \\[48\\] \\[49\\] \\[50\\] \\[51\\] \\[52\\] \\[53\\] \\[54\\] \\[55\\] \\[56\\] \\[57\\] \\[58\\] \\[59\\] \\[60\\] \\[61\\] \\[62\\] \\[63\\] \\[64\\] \\[65\\] \\[66\\] \\[67\\] \\[68\\] \\[69\\] \\[70\\] \\[71\\] \\[72\\] \\[73\\] \\[74\\] \\[75\\] \\[76\\] \\[77\\] \\[78\\] \\[79\\] \\[80\\] \\[81\\] \\[82\\] \\[83\\] \\[84\\] \\[85\\] \\[86\\] \\[87\\] \\[88\\] \\[89\\] \\[90\\] \\[91\\] \\[92\\] \\[93", "token_count": 297}

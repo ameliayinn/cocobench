@@ -1,0 +1,35 @@
+{"task_id": "python/0", "evaluation": "{'syntax_errors': {'lines': ['data = request.get(user_url)']}, 'logical_errors': {'lines': ['if type(item) is str:','   continue', 'if data == []:']}, 'performance_errors': {'lines': ['processed_data.append(item.lower())']},'security_errors': {'lines': ['eval(\"print(processed_data)\")']}, 'runtime_errors': {'lines': ['print(get_data_with_errors(user_url))']}, 'overall_errors': 8}", "token_count": 1102}
+{"task_id": "python/1", "evaluation": "}", "token_count": 1160}
+{"task_id": "python/2", "evaluation": "}", "token_count": 1224}
+{"task_id": "python/3", "evaluation": "```", "token_count": 445}
+{"task_id": "python/4", "evaluation": "}", "token_count": 1112}
+{"task_id": "python/5", "evaluation": "        # recursively call the function on the second half of the array", "token_count": 1280}
+{"task_id": "python/6", "evaluation": "output = {", "token_count": 608}
+{"task_id": "python/7", "evaluation": "{'logical_errors': {'lines': [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86,", "token_count": 1280}
+{"task_id": "python/8", "evaluation": "}", "token_count": 1135}
+{"task_id": "python/9", "evaluation": "}", "token_count": 379}
+{"task_id": "python/10", "evaluation": "}", "token_count": 1195}
+{"task_id": "python/11", "evaluation": "}", "token_count": 690}
+{"task_id": "python/12", "evaluation": "}", "token_count": 1222}
+{"task_id": "python/13", "evaluation": "}", "token_count": 1149}
+{"task_id": "python/14", "evaluation": "}", "token_count": 474}
+{"task_id": "python/15", "evaluation": "}", "token_count": 1144}
+{"task_id": "python/16", "evaluation": "}", "token_count": 1169}
+{"task_id": "python/17", "evaluation": "        raise Exception('Unknown role: '", "token_count": 1280}
+{"task_id": "python/18", "evaluation": "}", "token_count": 1097}
+{"task_id": "python/19", "evaluation": "After removing the irrelevant text, we are left with the following text: \"A random salt can prevent brute-force attacks. It is also used to prevent hash table attacks. It is also known as a key-derivation function (KDF). A KDF is a function that converts a password to a key. The first thing that should be done is to hash the password. This way, the password becomes a", "token_count": 1280}
+{"task_id": "python/20", "evaluation": "}", "token_count": 1242}
+{"task_id": "python/21", "evaluation": "### Answer", "token_count": 1280}
+{"task_id": "python/22", "evaluation": "    # Find all non-vowel characters in the", "token_count": 1280}
+{"task_id": "python/23", "evaluation": "The final answer is: $\\boxed{\\{\"task_id\": \"python/23\", \"evaluation\": \"Incorrect\"\\}}$", "token_count": 1215}
+{"task_id": "python/24", "evaluation": "}}$", "token_count": 1034}
+{"task_id": "python/25", "evaluation": "print", "token_count": 1280}
+{"task_id": "python/26", "evaluation": "content = '[{\"security_issues\": {\"lines\": [\"if emailPass == \\'\\':\", \"def SendEmail(to, subject, body, emailPass):\"], \"description\": \"Passing sensitive information like email password as a function argument can lead to accidental exposure.\"}}, {\"security_issues\": {\"lines\": [\"if emailPass == \\", "token_count": 574}
+{"task_id": "python/27", "evaluation": "}", "token_count": 1164}
+{"task_id": "python/28", "evaluation": "    assert output == '215630113f681b45e27c62404e70c2", "token_count": 1280}
+{"task_id": "python/29", "evaluation": "```", "token_count": 1126}
+{"task_id": "python/30", "evaluation": "``", "token_count": 1280}
+{"task_id": "python/31", "evaluation": "{'performance_issues': {'lines': ['data = request.get", "token_count": 1280}
+{"task_id": "python/32", "evaluation": "}", "token_count": 1126}
+{"task_id": "python/33", "evaluation": "{'logical_errors': {'lines': ['calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):', 'calculate_factorial(n):'], 'error': 'The function does not handle the case when the input number is 0. It will cause a RecursionError. The function should return 1 when the input number is 0.'},'syntactic_errors': {'lines': [], 'error': ''}, 'runtime_errors': {'lines': [], 'error': ''}}", "token_count": 1164}
+{"task_id": "python/34", "evaluation": "}", "token_count": 860}

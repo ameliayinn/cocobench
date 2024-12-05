@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "    ans = cnt[1] - 1 | 1", "token_count": 482}
+{"task_id": "python/1", "evaluation": "            elif min", "token_count": 223}
+{"task_id": "python/2", "evaluation": "        if", "token_count": 506}
+{"task_id": "python/3", "evaluation": "If you run the code,", "token_count": 512}
+{"task_id": "python/4", "evaluation": "if __name", "token_count": 191}
+{"task_id": "python/5", "evaluation": "    pos", "token_count": 311}
+{"task_id": "python/6", "evaluation": "                return", "token_count": 233}
+{"task_id": "python/7", "evaluation": "                return res %", "token_count": 510}
+{"task_id": "python/8", "evaluation": "            rect1['x'] + rect1['w'] >= rect2['x'] and", "token_count": 209}
+{"task_id": "python/9", "evaluation": "    min_idx =", "token_count": 245}
+{"task_id": "python/10", "evaluation": "        for x,y in", "token_count": 328}
+{"task_id": "python/11", "evaluation": "import collections", "token_count": 317}
+{"task_id": "python/12", "evaluation": "Input: n =", "token_count": 315}
+{"task_id": "python/13", "evaluation": "        if", "token_count": 483}
+{"task_id": "python/14", "evaluation": "```python", "token_count": 250}
+{"task_id": "python/15", "evaluation": "### Input: nums: [1, 1, 1, 1, 1, 1, 1,", "token_count": 408}
+{"task_id": "python/16", "evaluation": "This code will compare the two code snippets", "token_count": 512}
+{"task_id": "python/17", "evaluation": "        def dfs(curr, mask", "token_count": 434}
+{"task_id": "python/18", "evaluation": "        end = int(high[i]) + 1 if not is_less_thn", "token_count": 416}
+{"task_id": "python/19", "evaluation": "            if str(i)", "token_count": 443}

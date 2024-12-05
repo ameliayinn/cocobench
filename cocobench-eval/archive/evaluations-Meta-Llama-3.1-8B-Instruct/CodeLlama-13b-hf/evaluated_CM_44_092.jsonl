@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "# Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0\", \"evaluation\": \"Correct\"}  # Output: {\"task_id\": \"python/0", "token_count": 512}
+{"task_id": "python/1", "evaluation": "                min_price2 = min_price1", "token_count": 247}
+{"task_id": "python/2", "evaluation": "3", "token_count": 512}
+{"task_id": "python/3", "evaluation": "Input: mat = [[2,2,2,1,1,1],[2,1,2,2,2,1],[2,2,1,2,1,2],[2,2,2,1,2,2],[1,1,2,2,2,2],[2,", "token_count": 512}
+{"task_id": "python/4", "evaluation": "            (\"Aa\", 1),", "token_count": 512}
+{"task_id": "python/5", "evaluation": "print(groundtruth_solution.max", "token_count": 512}
+{"task_id": "python/6", "evaluation": "The function is supposed to return the list in the same order as it was inputted.", "token_count": 512}
+{"task_id": "python/7", "evaluation": "    print(Solution().count(\"1\", \"4", "token_count": 512}
+{"task_id": "python/8", "evaluation": "    print({\"task_id\": \"python/8", "token_count": 512}
+{"task_id": "python/9", "evaluation": "        nums = [2, 3, 4, 5, 1,", "token_count": 358}
+{"task_id": "python/10", "evaluation": "nums2 = [6,7,", "token_count": 512}
+{"task_id": "python/11", "evaluation": "    def specialPerm(self, nums: List[int]) -> int:", "token_count": 512}
+{"task_id": "python/12", "evaluation": "    def", "token_count": 512}
+{"task_id": "python/13", "evaluation": "        # Use Stack DS", "token_count": 512}
+{"task_id": "python/14", "evaluation": "``` ```python", "token_count": 250}
+{"task_id": "python/15", "evaluation": "# Note: The time complexity of the code is O(N*logN) because the sorting operation has a time complexity of O(N*logN). The space complexity is O(N) because the space required to store the sorted array is O(N).  # Correct because Solution 1 and Solution 2 are equivalent to the Groundtruth.", "token_count": 512}
+{"task_id": "python/16", "evaluation": "def", "token_count": 355}
+{"task_id": "python/17", "evaluation": "The code snippet is well-structured, readable, and efficient. It uses", "token_count": 512}
+{"task_id": "python/18", "evaluation": "```json", "token_count": 506}
+{"task_id": "python/19", "evaluation": "print(evaluate_code(content=\"class Solution:\\n    def isFascinating(self, n: int) -> bool: \\n        str_n = str(n) + str(2 * n) + str(3 * n)\\n        str_1_to_9 = '123456789'\\n\\n        # remove leading zeros\\n        while str_n.startswith('0'):\\n            str_n = str_n[1:]\\n\\n        if len(str_n) > 9:\\n            return False\\n\\n        for char in str_1_to_9:\\n            if char not in str_n:\\n                return False\\n\\n        return True\\n\\n# test program\\n test_n = [121, 33, 999]\\nfor i in test_n:\\n    print('{:5d}, {}'.format(i, Solution().isFascinating(i)))\", groundtruth=\"class Solution:\\n    def isFascinating(self, n: int) -> bool: \\n        str_n = str(n) + str(2 * n) + str(3 * n)\\n        str_1_to_9 = '123456789'\\n\\n        # remove leading zeros\\n        while str_n.startswith('0'):\\n            str_n = str_n[1:]\\n\\n        if len(str_n) > 9:\\n            return False\\n\\n        for char in str_1_to_9:\\n            if char not in str_n:\\n                return False\\n\\n        return True\\n\\n# test program\\n test_n = [121, 33, 999]\\nfor i in test_n:\\n    print('{:5d}, {}'.format(i, Solution().isFascinating(i)))\"))  # Output: {'task_id': 'python/19', 'evaluation': 'Correct'}  # Output: {'task_id': 'python/19', 'evaluation': 'Correct'}  # Output", "token_count": 512}

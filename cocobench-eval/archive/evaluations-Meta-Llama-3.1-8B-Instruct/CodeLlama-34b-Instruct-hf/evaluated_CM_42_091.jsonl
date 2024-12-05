@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "    def test_8(self", "token_count": 510}
+{"task_id": "python/1", "evaluation": "        return {\"", "token_count": 287}
+{"task_id": "python/2", "evaluation": "                    sumi += c * (n - len(row))", "token_count": 237}
+{"task_id": "python/3", "evaluation": "        for v, r,", "token_count": 512}
+{"task_id": "python/4", "evaluation": "groundtruth", "token_count": 267}
+{"task_id": "python/5", "evaluation": "            return max(neg_group,pos_group", "token_count": 512}
+{"task_id": "python/6", "evaluation": "                    # Multiply the second number by", "token_count": 233}
+{"task_id": "python/7", "evaluation": "The provided solution is not correct. The main difference between the content and groundtruth is the condition in the dfs function. In the content, it checks if x is less than max_sum, while in the groundtruth,", "token_count": 510}
+{"task_id": "python/8", "evaluation": "        for i in range((n//2)+1, n):", "token_count": 330}
+{"task_id": "python/9", "evaluation": "            return 0", "token_count": 245}
+{"task_id": "python/10", "evaluation": "    def maximumSumQueries(self, nums1: List[int], nums2: List[int], queries: List[List[int]]) -> List[int", "token_count": 512}
+{"task_id": "python/11", "evaluation": "                ans += countPerm(mask | 1 << i, nums[i", "token_count": 510}
+{"task_id": "python/12", "evaluation": "    def paintWalls(self, cost: List[int], time: List", "token_count": 439}
+{"task_id": "python/13", "evaluation": "                    if bot1[1] > arr[i][1]:", "token_count": 483}
+{"task_id": "python/14", "evaluation": "        result_groundtruth = solution.findPrimePairs", "token_count": 397}
+{"task_id": "python/15", "evaluation": "class Test", "token_count": 512}
+{"task_id": "python/16", "evaluation": "                    stack.append((j+ans-1", "token_count": 512}
+{"task_id": "python/17", "evaluation": "                new_mask = mask ^ (1", "token_count": 293}
+{"task_id": "python/18", "evaluation": "            total =", "token_count": 335}
+{"task_id": "python/19", "evaluation": "        self.assertFalse(solution.is", "token_count": 308}

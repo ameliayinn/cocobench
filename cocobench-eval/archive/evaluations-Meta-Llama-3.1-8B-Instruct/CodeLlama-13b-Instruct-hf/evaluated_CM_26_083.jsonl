@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "### Solution 6", "token_count": 214}
+{"task_id": "python/1", "evaluation": "        if ( min1 + min2 ) > money", "token_count": 489}
+{"task_id": "python/2", "evaluation": "  \"task_id", "token_count": 237}
+{"task_id": "python/3", "evaluation": "                answer", "token_count": 492}
+{"task_id": "python/4", "evaluation": "Note: The groundtruth code is assumed to be correct and working as expected. The task is to determine whether the content code is equivalent to the groundtruth code.", "token_count": 200}
+{"task_id": "python/5", "evaluation": "            return", "token_count": 512}
+{"task_id": "python/6", "evaluation": "print(canTraverse", "token_count": 512}
+{"task_id": "python/7", "evaluation": "The final answer is the output of", "token_count": 512}
+{"task_id": "python/8", "evaluation": "Test Case 38", "token_count": 209}
+{"task_id": "python/9", "evaluation": "    nums =", "token_count": 373}
+{"task_id": "python/10", "evaluation": "                nsp.append([x", "token_count": 328}
+{"task_id": "python/11", "evaluation": "Solution().specialPerm", "token_count": 334}
+{"task_id": "python/12", "evaluation": "    def", "token_count": 276}
+{"task_id": "python/13", "evaluation": "  \"task_id\": \"", "token_count": 512}
+{"task_id": "python/14", "evaluation": "###Python Code###", "token_count": 250}
+{"task_id": "python/15", "evaluation": "            cur_index = indices", "token_count": 512}
+{"task_id": "python/16", "evaluation": "[Your Name]", "token_count": 355}
+{"task_id": "python/17", "evaluation": "{", "token_count": 307}
+{"task_id": "python/18", "evaluation": "                return", "token_count": 444}
+{"task_id": "python/19", "evaluation": "        return", "token_count": 512}

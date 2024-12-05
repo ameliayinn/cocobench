@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "  \"task_id\": \"python/", "token_count": 214}
+{"task_id": "python/1", "evaluation": "                sys.path.insert(0, os", "token_count": 240}
+{"task_id": "python/2", "evaluation": "- The code in the content should be equivalent to the code in the groundtruth.", "token_count": 254}
+{"task_id": "python/3", "evaluation": "        bestInRow = [0 for _ in range(m)]", "token_count": 360}
+{"task_id": "python/4", "evaluation": "    s = s.upper()", "token_count": 512}
+{"task_id": "python/5", "evaluation": "The provided code is for finding the maximum strength of a list of integers. The strength of the list is calculated by finding the maximum product of the absolute values of the numbers in the list. The code first checks if the list has only one element, in which case the strength is the absolute value of that element. Then, it sorts the list and finds the maximum product of the absolute values of the numbers in the list. If the list has an odd number of negative numbers, the maximum product is divided by the smallest absolute value of the negative numbers. If the list has no negative numbers or only one negative number", "token_count": 311}
+{"task_id": "python/6", "evaluation": "print", "token_count": 233}
+{"task_id": "python/7", "evaluation": "def count(self, num1: str,", "token_count": 311}
+{"task_id": "python/8", "evaluation": "        if s[i", "token_count": 209}
+{"task_id": "python/9", "evaluation": "    min_idx =", "token_count": 262}
+{"task_id": "python/10", "evaluation": "        if not isinstance(x, int) or", "token_count": 512}
+{"task_id": "python/11", "evaluation": "                result[\"evaluation\"] = \"Incorrect\"", "token_count": 317}
+{"task_id": "python/12", "evaluation": "if __name__ ==", "token_count": 512}
+{"task_id": "python/13", "evaluation": "                    bot1 = right.pop()", "token_count": 483}
+{"task_id": "python/14", "evaluation": "{ \"task_id\": \"python/14\", \"evaluation\": \"Correct\" }  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  # end  #", "token_count": 512}
+{"task_id": "python/15", "evaluation": "    except Exception as", "token_count": 402}
+{"task_id": "python/16", "evaluation": "        with redirect_stdout", "token_count": 355}
+{"task_id": "python/17", "evaluation": "                self.res += amnts[new", "token_count": 294}
+{"task_id": "python/18", "evaluation": "        return dfs(0,True,True,0,True) % mod", "token_count": 512}
+{"task_id": "python/19", "evaluation": "        for i in range(1,", "token_count": 208}

@@ -1,0 +1,20 @@
+{"task_id": "python/0", "evaluation": "    def maximumLength", "token_count": 305}
+{"task_id": "python/1", "evaluation": "  \"evaluation\": \"Correct", "token_count": 440}
+{"task_id": "python/2", "evaluation": "    def matrixSumQueries(self, n: int, queries:", "token_count": 449}
+{"task_id": "python/3", "evaluation": "import", "token_count": 466}
+{"task_id": "python/4", "evaluation": "Here is the code with comments and explanations:", "token_count": 387}
+{"task_id": "python/5", "evaluation": "ground", "token_count": 512}
+{"task_id": "python/6", "evaluation": "                if gcd(nums[i],nums", "token_count": 283}
+{"task_id": "python/7", "evaluation": "            def dfs(n, x,", "token_count": 512}
+{"task_id": "python/8", "evaluation": "    unittest.main", "token_count": 351}
+{"task_id": "python/9", "evaluation": "``", "token_count": 512}
+{"task_id": "python/10", "evaluation": "  \"evaluation\": \"Correct", "token_count": 512}
+{"task_id": "python/11", "evaluation": "    def specialPerm(self", "token_count": 512}
+{"task_id": "python/12", "evaluation": "            dp[i][j]", "token_count": 448}
+{"task_id": "python/13", "evaluation": "        self.assertEqual(compare", "token_count": 512}
+{"task_id": "python/14", "evaluation": "  \"task_id\": \"python/14\",", "token_count": 402}
+{"task_id": "python/15", "evaluation": "    unittest.main()  # Correct", "token_count": 512}
+{"task_id": "python/16", "evaluation": "The final answer is: Correct.", "token_count": 355}
+{"task_id": "python/17", "evaluation": "The groundtruth code is missing a line of code in the dfs function where it is supposed to increment the amnts[mask] by 1 before calling the dfs function recursively. Without", "token_count": 512}
+{"task_id": "python/18", "evaluation": "                    total += dfs(i+1, is_greater_thn_low or nx_digit > int(low[i]), is_less_thn_high or nx_digit < int(high[i]), nx_digit, nonzero or nx_digit!=", "token_count": 335}
+{"task_id": "python/19", "evaluation": "        if '0' in concatenated", "token_count": 415}
