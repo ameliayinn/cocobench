@@ -10,4 +10,4 @@ max_memory: '{0: "80GIB"}'
 # max_new_tokens: [512]
 top_k: [50]
 top_p: [0.95]
-max_new_tokens: [256, 512, 1024, 2048]
+max_new_tokens: [256, 1024, 2048]
