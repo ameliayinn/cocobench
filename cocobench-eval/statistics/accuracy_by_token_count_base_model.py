@@ -32,7 +32,7 @@ for model_type, lengths in length_accuracy.items():
 
 # 分桶：固定 10 个桶
 all_token_counts = data["token_count"].unique()
-num_buckets = 10
+num_buckets = 8
 bucket_edges = np.histogram_bin_edges(all_token_counts, bins=num_buckets)
 bucket_labels = [
     f"{int(bucket_edges[i])}-{int(bucket_edges[i + 1])}" for i in range(len(bucket_edges) - 1)
@@ -128,5 +128,5 @@ ax.legend(fontsize=9)
 # 添加总标题
 fig.suptitle("Base vs Instruct Accuracy by Token Count Buckets", fontsize=16)
 fig.tight_layout(rect=[0, 0, 1, 0.95])  # 调整标题位置
-plt.savefig("img/Base_vs_Instruct_Comparison_by_Base_Model.jpg")
+plt.savefig("img/Base_vs_Instruct_Comparison_by_Base_Model.pdf", format='pdf')
 plt.show()

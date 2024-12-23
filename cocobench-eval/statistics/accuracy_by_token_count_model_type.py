@@ -41,7 +41,7 @@ for model_type, lengths in length_accuracy.items():
 
 # 分桶：固定 20 个桶
 all_token_counts = data["token_count"].unique()
-num_buckets = 20
+num_buckets = 12
 bucket_edges = np.histogram_bin_edges(all_token_counts, bins=num_buckets)
 bucket_labels = [
     f"{int(bucket_edges[i])}-{int(bucket_edges[i + 1])}" for i in range(len(bucket_edges) - 1)
