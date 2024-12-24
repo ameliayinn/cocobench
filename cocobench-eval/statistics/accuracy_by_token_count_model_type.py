@@ -136,5 +136,5 @@ for i, model in enumerate(models):
 # 添加总标题和调整布局
 fig.suptitle("Base vs Instruct Accuracy with Smooth Curves (2x3 Subplots)", fontsize=16)
 fig.tight_layout(rect=[0, 0, 1, 0.95])  # 调整标题位置
-plt.savefig("img/Base_vs_Instruct_Comparison_by_Model_Type.jpg")
+plt.savefig("img/Base_vs_Instruct_Comparison_by_Model_Type.pdf", format='pdf')
 plt.show()

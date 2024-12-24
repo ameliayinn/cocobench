@@ -57,7 +57,7 @@ for model in os.listdir(base_dir):
 # Plotting
 
 def plot_results(results_base, results_instruct, task_list):
-    fig, axes = plt.subplots(2, len(task_list), figsize=(20, 8), sharey=True)
+    fig, axes = plt.subplots(2, len(task_list), figsize=(20, 8), sharey=True, dpi=300)
     axes = axes.reshape(2, len(task_list))  # Ensure axes is 2xN for base and instruct models
 
     for i, task in enumerate(task_list):
@@ -107,7 +107,7 @@ def plot_results(results_base, results_instruct, task_list):
         ax_instruct.legend(fontsize=6)
 
     plt.tight_layout()
-    plt.savefig('max_new_tokens.jpg')
+    plt.savefig('img/max_new_tokens.pdf', format='pdf')
 
 # Plot base and instruct models in 2x5 layout
 sorted_tasks = sorted(tasks)
