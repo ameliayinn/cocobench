@@ -1,0 +1,28 @@
+top-p&top-k:
+We notice that top-p and top-k sensitivity varies by task. Structured tasks like CG tasks benefit from deterministic outputs since code has stricter correctness requirements. A narrower token distribution (lower top-p and top-k) is often sufficient for accurate results. Whereas open-ended tasks like CM tasks require creativity and diversity of LLMs, as there are multiple plausible ways to modify or improve code.
+It's worth mentioning that larger models are more sensitive to top-p and top-k variance as they generate a wider range of plausible token predictions due to their richer token distribution and greater expressive power. When using high top-p and top-k for inference, the outputs of larger models can become overly diverse or less coherent because they are capable of generating many "plausible" but less relevant solutions. Smaller models, by contrast, have less expressive token distributions, making them inherently more deterministic and less impacted by high top-p and top-k.
+Instruction models consistently outperform base models. We believe this is due to the exposure of instruction models to examples with task-specific instructions during training.
+The observed trends arise because:
+Top-p and top-k sampling governs the tradeoff between diversity and precision in token generation, directly impacting accuracy based on the task's requirements for determinism or exploration.
+Instruction models align better with task-specific objectives, improving performance across tasks and making them more robust to sampling variations.
+Larger models perform better in inference due to their capacity to encode richer token distributions, but this same capacity makes them more sensitive to sampling noise at high top-p and top-k.
+
+Conclusion:
+Top-p and top-k sensitivity varies by task, with structured tasks favoring determinism and open-ended tasks benefiting from diversity. Larger models are more sensitive to sampling noise, while instruction models consistently outperform base models due to better task alignment.
+
+token count range:
+Fig 2 illustrates how model accuracy varies across different token count ranges of input.
+All models, regardless of size and type, face challenges in maintaining attention across longer contexts due to the quadratic cost of self-attention in transformers. Instruction tuning likely helps focus attention on task-relevant segments of the input, mitigating some of this drop in performance for instruction models.
+Medium token ranges align well with the pretraining datasets and tokenization schemes for most models. Shorter tokens (e.g., 460–1191) may lead to sparse representation, while longer tokens may overload the model's capacity.
+It's also noted how scaling laws reconcile with the outcome. Larger models are inherently better at capturing long-range dependencies due to their larger parameter space and richer latent representations. Smaller models lack the capacity to encode such complexity effectively.
+
+Conclusion:
+Medium token ranges align best with pretraining data, while shorter ranges may lack representation and longer ranges strain model capacity. Instruction tuning improves focus on task-relevant inputs. Larger models handle long-range dependencies better than smaller ones.
+
+max new tokens:
+Higher max new tokens directly correlates with better accuracy in tasks requiring coherent and extended outputs (e.g., CG and CU). It allows the model to generate longer sequences, potentially capturing more context and completing more complex outputs.
+Some tasks like CM benefit less due to their inherent requirements, where longer sequences add minimal value.
+Comparably, larger models and instruction-tuned models are better equipped to utilize extended token generation due to their ability to manage more extensive contexts and dependencies.
+
+Conclusion:
+Higher max new tokens improves accuracy for tasks needing longer, coherent outputs (e.g., CG), while tasks like CM see limited benefit. Larger and instruction-tuned models handle extended token generation more effectively due to their capacity for managing complex contexts.
