@@ -2,3 +2,4 @@
 # cocobench-eval/archive
 cocobench-eval/__pycache__
 # cocobench-eval/tests
+*.log
