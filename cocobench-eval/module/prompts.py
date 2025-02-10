@@ -46,11 +46,11 @@ Please deduce the output of the following code based on the code snippet and the
 """
 
 CUF_middle_1 = """
-The code snippet is:
+The code snippet is as follows:
 """
 
 CUF_middle_2 = """
-The input is:
+The input is as follows:
 """
 
 CUF_end = """
@@ -62,11 +62,11 @@ Please deduce the input of the following code based on the code snippet and the 
 """
 
 CUR_middle_1 = """
-The code snippet is:
+The code snippet is as follows:
 """
 
 CUR_middle_2 = """
-The output is:
+The output is as follows:
 """
 
 CUR_end = """
