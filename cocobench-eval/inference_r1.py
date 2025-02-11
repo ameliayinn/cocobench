@@ -11,8 +11,12 @@ from module.dataloader import read_problems
 from module.prompts import PROMPTS
 from openai import OpenAI
 
-url = 'https://api.siliconflow.cn/v1/'
-api_key = 'sk-vleuxzmqfkrzdoywlgpcvdnsbykzldmxttlcmkdajkhqlwqs'
+# url = 'https://api.siliconflow.cn/v1/'
+# url = 'https://ds.yovole.com/api/chat/completions'
+url = 'https://ds.yovole.com/api/'
+# api_key = 'sk-vleuxzmqfkrzdoywlgpcvdnsbykzldmxttlcmkdajkhqlwqs'
+# api_key = 'sk-b2a1efd01cdb4380ad8c8fb55268da8d'
+api_key = 'sk-c8ed4c3b046c41a58b2e821d2dcea477'
 
 client = OpenAI(
     base_url=url,
@@ -76,10 +80,10 @@ def generate(tasktype, out_path, format_tabs = False):
             # Append the prompt to the content
             # 发送带有流式输出的请求
             content = ""
-            reasoning_content=""
+            # reasoning_content=""
             
             message = [
-                {'role': 'user', 'content': prompt}
+                {'role': 'user', 'content': 'Don\'t output thinking process. Give only the result of your thinking.' + prompt}
             ]
             '''
             message = [
@@ -89,17 +93,35 @@ def generate(tasktype, out_path, format_tabs = False):
             
             start_time = time.time()  # 记录推理开始时间
             response = client.chat.completions.create(
-                model="deepseek-ai/DeepSeek-R1",  # 确保使用正确的模型引擎名称
+                # model="deepseek-ai/DeepSeek-R1",  # 确保使用正确的模型引擎名称
+                model="DeepSeek-R1",
                 messages=message,
-                stream=True,  # 启用流式输出
-                max_tokens=4096
+                stream=True,  # 启用流式
+                max_tokens=8000
             )
+            
+            
             # 逐步接收并处理响应
             for chunk in response:
                 if chunk.choices[0].delta.content:
                     content += chunk.choices[0].delta.content
-                if chunk.choices[0].delta.reasoning_content:
-                    reasoning_content += chunk.choices[0].delta.reasoning_content
+                else:
+                    print("there is no content")
+                # if chunk.choices[0].delta.reasoning_content:
+                    # reasoning_content += chunk.choices[0].delta.reasoning_content
+            # content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+            content = re.sub(r".*?</think>", "", content, flags=re.DOTALL).strip()
+            
+            
+            '''        
+            if response.choices:
+                content = response.choices[0].message.content
+                # Remove all <think> blocks
+                content = re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
+                # print("Generated sample:", sample)
+            else:
+                content = "No valid content generated"
+                print("No valid choices in response.")'''
             
             end_time = time.time()  # 记录推理结束时间
             inference_time = end_time - start_time  # 计算推理时间

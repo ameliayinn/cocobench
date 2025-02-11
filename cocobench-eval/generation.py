@@ -7,6 +7,8 @@ from transformers import (
 )
 import typing
 import tqdm
+import time
+import re
 
 # Type alias for a function that generates batch completions
 # The function takes a model, tokenizer, prompt, and number of samples, and returns a list of completions.
@@ -78,19 +80,24 @@ def generate(
                 PROMPTS[tasktype][0] + PROMPTS[tasktype][1] + prompt_paradigm["code"] + PROMPTS[tasktype][2] + str(prompt_paradigm["output"]) + PROMPTS[tasktype][3]
             )
         
+        start_time = time.time()
         # Generate a batch of completions for the current task
         batch_completions = generate_batch_completion(
             model, tokenizer, prompt, num_samples_per_task
         )
+        end_time = time.time()
+        inference_time = end_time - start_time
 
         # For each completion in the batch, create a result dictionary and append it to samples
         for sample in batch_completions:
+            sample = re.sub(r".*?</think>", "", sample, flags=re.DOTALL).strip()
             if tasktype == 'CG':
                 result = dict(
                     task_id=task_id,
                     # input=prompt,
                     content=sample,
                     groundtruth=problems[task_id]["complete_code"],
+                    inference_time=inference_time
                 )
             if tasktype == 'CM':
                 result = dict(
@@ -98,6 +105,7 @@ def generate(
                     # input=prompt,
                     content=sample,  # The generated completion text
                     groundtruth=problems[task_id]["corrected_code"],
+                    inference_time=inference_time
                 )
             if tasktype == 'CR':
                 result = dict(
@@ -105,6 +113,7 @@ def generate(
                     # input=prompt,
                     content=sample,
                     groundtruth=problems[task_id]["issue_categories"],
+                    inference_time=inference_time
                 )
             if tasktype == 'CUF':
                 result = dict(
@@ -112,6 +121,7 @@ def generate(
                     # input=prompt,
                     content=sample,
                     groundtruth=problems[task_id]["expected_output"],
+                    inference_time=inference_time
                 )
             if tasktype == 'CUR':
                 result = dict(
@@ -119,6 +129,7 @@ def generate(
                     # input=prompt,
                     content=sample,
                     groundtruth=problems[task_id]["input"],
+                    inference_time=inference_time
                 )
 
             # Add the result to the list of samples
