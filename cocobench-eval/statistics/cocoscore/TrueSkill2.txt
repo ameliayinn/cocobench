@@ -1,0 +1,8 @@
+{'deepseek-coder-33b-base': {'CUF': 0.2137, 'CUR': 0.084, 'CM': 0.1, 'CR': 0.2857, 'CG': 0.2366}, 'CodeLlama-7b-Instruct-hf': {'CUF': 0.0992, 'CUR': 0.0513, 'CM': 0.0, 'CR': 0.1714, 'CG': 0.1462}, 'DeepSeek-R1-Distill-Qwen-7B': {'CUF': 0.5702, 'CG': 0.3588, 'CUR': 0.0909, 'CR': 0.3429, 'CM': 0.2}, 'o1': {'CR': 0.4571, 'CG': 0.5573, 'CUF': 0.6612, 'CM': 0.45, 'CUR': 0.0909}, 'CodeLlama-13b-Instruct-hf': {'CUF': 0.0744, 'CUR': 0.0427, 'CM': 0.25, 'CR': 0.2121, 'CG': 0.186}, 'CodeLlama-34b-Instruct-hf': {'CUF': 0.1488, 'CUR': 0.0333, 'CM': 0.1, 'CR': 0.2353, 'CG': 0.1908}, 'gpt4': {'CR': 0.4571, 'CG': 0.4427, 'CUF': 0.5372, 'CM': 0.15, 'CUR': 0.157}, 'deepseek-coder-6.7b-instruct': {'CUF': 0.3565, 'CUR': 0.1193, 'CM': 0.35, 'CR': 0.2812, 'CG': 0.4692}, 'deepseek-coder-1.3b-instruct': {'CUF': 0.1429, 'CUR': 0.042, 'CM': 0.2, 'CR': 0.2353, 'CG': 0.1985}, 'deepseek-coder-33b-instruct': {'CUF': 0.3193, 'CUR': 0.0431, 'CM': 0.45, 'CR': 0.3714, 'CG': 0.3588}, 'deepseek-coder-6.7b-base': {'CUF': 0.2605, 'CUR': 0.0424, 'CM': 0.0, 'CR': 0.1471, 'CG': 0.2231}, 'CodeLlama-7b-hf': {'CUF': 0.1121, 'CUR': 0.0333, 'CM': 0.0526, 'CR': 0.3939, 'CG': 0.1}, 'CodeLlama-34b-hf': {'CUF': 0.1176, 'CUR': 0.0084, 'CM': 0.05, 'CR': 0.2, 'CG': 0.2077}, 'deepseek-coder-1.3b-base': {'CUF': 0.1488, 'CUR': 0.0254, 'CM': 0.1053, 'CR': 0.3143, 'CG': 0.088}, 'CodeLlama-13b-hf': {'CUF': 0.115, 'CUR': 0.0336, 'CM': 0.2, 'CR': 0.3226, 'CG': 0.1923}}
+
+任务难度排名（从最难到最容易）:
+1. CUR (μ=15.61, σ=2.34)
+2. CM (μ=21.83, σ=1.74)
+3. CUF (μ=23.96, σ=1.75)
+4. CG (μ=24.32, σ=1.64)
+5. CR (μ=25.38, σ=1.81)

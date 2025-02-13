@@ -2,8 +2,10 @@ import numpy as np
 import os
 import pandas as pd
 import re
+import json
 
-# run in statistics directionary
+# run in cocobench/cocobench-eval/statistics/cocoscore directionary
+# python CoCoScore.py > inverse_normalization.txt
 
 ### 选择 TrueSkill 转换方法 ###
 def inverse_normalization(task_ratings):
@@ -24,11 +26,11 @@ def softmax_scaling(task_ratings):
 
 # 任务的 TrueSkill 评分 (mu 值) from TrueSkill2.py
 task_ratings = {
-    "CG": 24.60,
-    "CM": 22.43,
-    "CR": 25.65, # 最简单
-    "CUF": 23.69,
-    "CUR": 14.56, # 最难
+    "CG": 24.32,
+    "CM": 21.83,
+    "CR": 25.38, # 最简单
+    "CUF": 23.96,
+    "CUR": 15.61, # 最难
 }
 
 # 选择一种方法来计算权重，最后决定选择inverse_normalization
@@ -39,8 +41,11 @@ print(f"任务权重:")
 for task, weight in task_weights.items():
     print(f"{task}: {weight:.4f}")
 
-correctness_dir = 'correctness/'
+correctness_dir = '../correctness/'
 file_names = os.listdir(correctness_dir)
+
+model_scores = {}
+
 for file_name in file_names:
     if not file_name.endswith('.csv'):
         continue
@@ -52,4 +57,11 @@ for file_name in file_names:
 
     # 计算最终得分
     score = sum(task_accuracies[task] * task_weights[task] for task in task_accuracies)
+    task_accuracies['CoCo-Score'] = score
+    
+    model_scores[model_name] = task_accuracies
+    
     print(f"{model_name} 最终得分: {score:.4f}")
+
+with open('cocoscore.json', 'w') as f:
+    json.dump(model_scores, f, indent=4)

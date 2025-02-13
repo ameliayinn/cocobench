@@ -1,6 +1,6 @@
-tasktype,correct,total,rate
-CUF,25,117,0.2137
-CUR,10,119,0.084
-CM,2,20,0.1
-CR,10,35,0.2857
-CG,31,131,0.2366
+tasktype,token_num,correct,total,rate
+CG,1024,30,126,0.2381
+CM,1024,7,20,0.35
+CR,512,11,34,0.3235
+CUF,2048,25,117,0.2137
+CUR,2048,10,119,0.084

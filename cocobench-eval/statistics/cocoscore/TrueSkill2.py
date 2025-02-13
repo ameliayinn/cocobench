@@ -15,7 +15,7 @@ task_ratings = {task: env.create_rating() for task in tasks}  # 初始化任务�
 
 model_accuracies = {}
 
-correctness_dir = 'correctness/'
+correctness_dir = '../correctness/'
 file_names = os.listdir(correctness_dir)
 for file_name in file_names:
     if not file_name.endswith('.csv'):
@@ -27,7 +27,7 @@ for file_name in file_names:
     task_accuracies = dict(zip(df['tasktype'], df['rate']))
     model_accuracies[model_name] = task_accuracies
         
-# print(model_accuracies)
+print(model_accuracies)
 '''
 # 假设 3 个模型的准确度数据（示例）
 model_accuracies = {
