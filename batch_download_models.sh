@@ -15,7 +15,7 @@ if [ ${#models[@]} -eq 0 ]; then
   exit 1
 fi
 
-download_dir="/data/models/"
+download_dir="/data/models/code_models/deepseek/"
 
 hf_token="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"
 

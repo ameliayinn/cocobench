@@ -1,0 +1,20 @@
+任务权重:
+CG: 0.1729
+CM: 0.1896
+CR: 0.1658
+CUF: 0.1795
+CUR: 0.2921
+CodeLlama-7b-hf 最终得分: 0.1224
+CodeLlama-7b-Instruct-hf 最终得分: 0.0865
+CodeLlama-13b-hf 最终得分: 0.1551
+CodeLlama-13b-Instruct-hf 最终得分: 0.1406
+CodeLlama-34b-hf 最终得分: 0.1021
+CodeLlama-34b-Instruct-hf 最终得分: 0.1274
+deepseek-coder-1.3b-base 最终得分: 0.1214
+deepseek-coder-1.3b-instruct 最终得分: 0.1492
+deepseek-coder-6.7b-base 最终得分: 0.1221
+deepseek-coder-6.7b-instruct 最终得分: 0.2930
+deepseek-coder-33b-base 最终得分: 0.1702
+deepseek-coder-33b-instruct 最终得分: 0.2789
+DeepSeek-R1-Distill-Qwen-7B 最终得分: 0.2857
+o1 最终得分: 0.4027

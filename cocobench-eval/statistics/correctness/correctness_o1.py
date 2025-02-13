@@ -14,7 +14,7 @@ for model in os.listdir(evaluations_dir):
     
     if os.path.isdir(model_path) and 'o1' in model:
     #if os.path.isdir(model_path):
-        with open(f'correctness_{model}.csv', 'w', newline='') as csv_file:
+        with open(f'correctness/correctness_{model}.csv', 'w', newline='') as csv_file:
             fieldnames = ['tasktype', 'correct', 'total', 'rate']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             
