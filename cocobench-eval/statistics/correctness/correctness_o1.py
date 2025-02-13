@@ -4,14 +4,15 @@ from collections import defaultdict
 import re
 import os
 
+# run in statistics directionary
 evaluations_dir = "../evaluations"
 
-file_pattern = re.compile(r"evaluated_(CG|CM|CR|CUF|CUR)_(\d+)_(\d+)_(\d+).jsonl")
+file_pattern = re.compile(r"evaluated_(CG|CM|CR|CUF|CUR)_*.jsonl")
 
 for model in os.listdir(evaluations_dir):
     model_path = os.path.join(evaluations_dir, model)
     
-    if os.path.isdir(model_path) and 'R1' in model:
+    if os.path.isdir(model_path) and 'o1' in model:
     #if os.path.isdir(model_path):
         with open(f'correctness_{model}.csv', 'w', newline='') as csv_file:
             fieldnames = ['tasktype', 'correct', 'total', 'rate']

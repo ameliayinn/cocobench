@@ -4,15 +4,16 @@ from collections import defaultdict
 import re
 import os
 
+# run in statistics directionary
 evaluations_dir = "../evaluations"
 
-file_pattern = re.compile(r"evaluated_(CG|CM|CR|CUF|CUR)_*.jsonl")
+file_pattern = re.compile(r"evaluated_(CG|CM|CR|CUF|CUR)_50_095_2048.jsonl")
 
 for model in os.listdir(evaluations_dir):
     model_path = os.path.join(evaluations_dir, model)
     
-    if os.path.isdir(model_path) and 'o1' in model:
-    #if os.path.isdir(model_path):
+    #if os.path.isdir(model_path) and 'R1' in model:
+    if os.path.isdir(model_path) and 'R1' not in model:
         with open(f'correctness_{model}.csv', 'w', newline='') as csv_file:
             fieldnames = ['tasktype', 'correct', 'total', 'rate']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -34,9 +35,15 @@ for model in os.listdir(evaluations_dir):
                         with open(file_path, 'r') as jsonl_file:
                             for line in jsonl_file:
                                 data = json.loads(line)
-                                total_count += 1
-                                if data['evaluation'] == 'Correct':
-                                    correct_count += 1
+                                if data:
+                                    total_count += 1
+                                    try:
+                                        if data['evaluation'] == 'Correct':
+                                            correct_count += 1
+                                    except KeyError as e:
+                                        print(f"KeyError: {e} in file {file_path} at index {data['index']}")
+                                    except Exception as e:
+                                        print(f"An unexpected error occurred: {e} in file {file_path}")
 
                         # 计算正确率
                         accuracy = round(correct_count / total_count, 4)
