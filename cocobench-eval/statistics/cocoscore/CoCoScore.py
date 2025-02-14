@@ -26,11 +26,11 @@ def softmax_scaling(task_ratings):
 
 # 任务的 TrueSkill 评分 (mu 值) from TrueSkill2.py
 task_ratings = {
-    "CG": 24.32,
-    "CM": 21.83,
-    "CR": 25.38, # 最简单
-    "CUF": 23.96,
-    "CUR": 15.61, # 最难
+    "CG": 23.83,
+    "CM": 23.03,
+    "CR": 26.50, # 最简单
+    "CUF": 22.87,
+    "CUR": 13.26, # 最难
 }
 
 # 选择一种方法来计算权重，最后决定选择inverse_normalization

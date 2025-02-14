@@ -4,7 +4,8 @@ import os
 import pandas as pd
 import re
 
-# run in statistics directionary
+# run in /data/ywj/cocobench/cocobench-eval/statistics/cocoscore directionary
+# python TrueSkill2.py > TrueSkill2.txt
 
 # 初始化 TrueSkill 环境
 env = ts.TrueSkill(draw_probability=0.05)  # 设置平局概率，部分任务可能难度相近
