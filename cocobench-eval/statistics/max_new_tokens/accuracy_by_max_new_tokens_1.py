@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Define the directory containing the evaluation files
-base_dir = "../evaluations"
+base_dir = "../../evaluations"
 
 # Data structure to store results
 tasks = set()
@@ -107,7 +107,7 @@ def plot_results(results_base, results_instruct, task_list):
         ax_instruct.legend(fontsize=6)
 
     plt.tight_layout()
-    plt.savefig('img/max_new_tokens.pdf', format='pdf')
+    plt.savefig('max_new_tokens.pdf', format='pdf')
 
 # Plot base and instruct models in 2x5 layout
 sorted_tasks = sorted(tasks)
